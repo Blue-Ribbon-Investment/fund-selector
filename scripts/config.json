@@ -37,7 +37,8 @@
     "Mid cap": ["Mid Cap Fund"],
     "Small cap": ["Small Cap Fund"],
     "ELSS (tax saver)": ["ELSS", "ELSS- Tax Saver Fund"],
-    "Balanced/Hybrid": ["Balanced Hybrid Fund", "Balanced Advantage", "Dynamic Asset Allocation", "Equity Oriented Balanced Fund", "Equity Savings Fund"]
+    "Multi asset": ["Multi Asset Allocation"],
+    "Balanced/Hybrid": ["Balanced Hybrid Fund", "Conservative Hybrid Fund", "Aggressive Hybrid Fund", "Balanced Advantage", "Dynamic Asset Allocation", "Equity Oriented Balanced Fund", "Equity Savings Fund"]
   },
   "_categories_note": "Keys are the tab names shown on the site. Values are AMFI section fragments from NAVAll.txt. Add/remove a key (or one of its fragments) to add/remove a whole category; the tabs update themselves.",
   "include_codes": [],

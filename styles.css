@@ -62,3 +62,8 @@ canvas{width:100%;height:120px}
 .method{margin:18px 0 60px;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 20px}
 .method li{margin:6px 0}
 @media(max-width:980px){.grid{grid-template-columns:1fr}aside .card{position:static}}
+
+.wtotal{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--mut)}
+.wtotal b{color:var(--txt);font-variant-numeric:tabular-nums}
+.wtotal button{background:#12141c;border:1px solid var(--line);color:var(--txt);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:10.5px}
+.wtotal button:hover{border-color:var(--acc)}

@@ -1,6 +1,6 @@
 {
  "source": "amfi-navall",
- "count": 194,
+ "count": 392,
  "rf": 0.058416,
  "default_weights": {
   "er": 10,
@@ -73,9 +73,29 @@
  },
  "funds": [
   {
+   "code": "152076",
+   "name": "360 ONE Balanced Hybrid Fund",
+   "amc": "360 ONE Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 13.3745,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120517",
+   "name": "Aditya Birla Sun Life Aggressive Hybrid Fund",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 1673.78,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "131670",
    "name": "Aditya Birla Sun Life Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 126.86,
@@ -83,9 +103,59 @@
    "aum": null
   },
   {
+   "code": "120705",
+   "name": "Aditya Birla Sun Life Conservative Hybrid Fund",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 78.0392,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "144394",
+   "name": "Axis Aggressive Hybrid Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 22.41,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "141642",
+   "name": "Axis Balanced Advantage Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 23.69,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120480",
+   "name": "Axis Conservative Hybrid Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 35.5887,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "135120",
+   "name": "Axis Equity Savings Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 26.35,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "131355",
    "name": "BANDHAN Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 28.912,
@@ -93,9 +163,29 @@
    "aum": null
   },
   {
+   "code": "118491",
+   "name": "BANDHAN CONSERVATIVE HYBRID FUND",
+   "amc": "Bandhan Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 36.9756,
+   "date": "31-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "139527",
+   "name": "BANK OF INDIA AGGRESSIVE HYBRID FUND",
+   "amc": "Bank of India Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 44.94,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "127850",
    "name": "BANK OF INDIA BALANCED ADVANTAGE FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 27.6151,
@@ -103,9 +193,39 @@
    "aum": null
   },
   {
+   "code": "119393",
+   "name": "BANK OF INDIA CONSERVATIVE HYBRID FUND",
+   "amc": "Bank of India Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 37.6326,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150260",
+   "name": "BARODA BNP PARIBAS AGGRESSIVE HYBRID FUND",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 31.3597,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150206",
+   "name": "BARODA BNP PARIBAS CONSERVATIVE HYBRID FUND",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 56.9493,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "152194",
    "name": "Bajaj Finserv Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Bajaj Finserv Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 11.781,
@@ -113,9 +233,89 @@
    "aum": null
   },
   {
+   "code": "140382",
+   "name": "Bandhan Aggressive Hybrid Fund",
+   "amc": "Bandhan Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 31.096,
+   "date": "31-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "145396",
+   "name": "Baroda BNP Paribas Balanced Advantage Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 27.2769,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "147496",
+   "name": "Baroda BNP Paribas Equity Savings Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 18.4833,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118272",
+   "name": "Canara Robeco Aggressive Hybrid Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 408.01,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152688",
+   "name": "Canara Robeco Balanced Advantage Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 10.19,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118309",
+   "name": "Canara Robeco Conservative Hybrid Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 113.7607,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119019",
+   "name": "DSP Aggressive Hybrid Fund",
+   "amc": "DSP Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 383.658,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118994",
+   "name": "DSP Conservative Hybrid Fund",
+   "amc": "DSP Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 68.3424,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "126393",
    "name": "DSP Dynamic Asset Allocation Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 32.529,
@@ -123,9 +323,19 @@
    "aum": null
   },
   {
+   "code": "118624",
+   "name": "Edelweiss Aggressive Hybrid Fund",
+   "amc": "Edelweiss Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 73.75,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "118615",
    "name": "Edelweiss Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 59.87,
@@ -133,9 +343,19 @@
    "aum": null
   },
   {
+   "code": "118546",
+   "name": "Franklin India Aggressive Hybrid Fund",
+   "amc": "Franklin Templeton Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 293.483,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "150481",
    "name": "Franklin India Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 14.7531,
@@ -143,9 +363,69 @@
    "aum": null
   },
   {
+   "code": "118574",
+   "name": "Franklin India Conservative Hybrid Fund",
+   "amc": "Franklin Templeton Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 101.5256,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "145599",
+   "name": "Groww Aggressive Hybrid Fund",
+   "amc": "Groww Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 22.4985,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119062",
+   "name": "HDFC Aggressive Hybrid Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 119.624,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118968",
+   "name": "HDFC Balanced Advantage Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 546.24,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119118",
+   "name": "HDFC Conservative Hybrid Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 88.4516,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151122",
+   "name": "HSBC Aggressive Hybrid Fund",
+   "amc": "HSBC Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 65.671,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "151129",
    "name": "HSBC Balanced Advantage Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 50.4058,
@@ -153,9 +433,19 @@
    "aum": null
   },
   {
+   "code": "120073",
+   "name": "HSBC Conservative Hybrid Fund",
+   "amc": "HSBC Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 70.2164,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "151060",
    "name": "HSBC Equity Savings Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 40.7582,
@@ -165,7 +455,7 @@
   {
    "code": "152509",
    "name": "Helios Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Helios Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 11.71,
@@ -173,9 +463,19 @@
    "aum": null
   },
   {
+   "code": "120251",
+   "name": "ICICI Prudential Aggressive Hybrid Fund",
+   "amc": "ICICI Prudential Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 433.28,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120377",
    "name": "ICICI Prudential Balanced Advantage Fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 85.81,
@@ -185,7 +485,7 @@
   {
    "code": "154417",
    "name": "ICICI Prudential Balanced Hybrid Fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 9.74,
@@ -193,9 +493,39 @@
    "aum": null
   },
   {
+   "code": "120616",
+   "name": "ICICI Prudential Conservative Hybrid Fund",
+   "amc": "ICICI Prudential Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 86.3847,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "147789",
+   "name": "ITI Balanced Advantage Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 15.439,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "143537",
+   "name": "Invesco India Aggressive Hybrid Fund",
+   "amc": "Invesco Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 23.6359,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120333",
    "name": "Invesco India Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 62.68,
@@ -205,7 +535,7 @@
   {
    "code": "146457",
    "name": "Invesco India Equity Savings Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 18.7714,
@@ -213,9 +543,69 @@
    "aum": null
   },
   {
+   "code": "120484",
+   "name": "JM Aggressive Hybrid Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 134.1547,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154701",
+   "name": "JioBlackRock Balanced Advantage Fund",
+   "amc": "Jio BlackRock Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 10.1076,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119767",
+   "name": "Kotak Aggressive Hybrid Fund",
+   "amc": "Kotak Mahindra Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 45.269,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "144335",
+   "name": "Kotak Balanced Advantage Fund",
+   "amc": "Kotak Mahindra Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 22.453,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120154",
+   "name": "Kotak Conservative Hybrid Fund",
+   "amc": "Kotak Mahindra Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 68.7382,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120261",
+   "name": "LIC MF Aggressive Hybrid Fund",
+   "amc": "LIC Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 222.9218,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "149261",
    "name": "LIC MF Balanced Advantage Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 14.2707,
@@ -223,9 +613,29 @@
    "aum": null
   },
   {
+   "code": "120276",
+   "name": "LIC MF Conservative Hybrid Fund",
+   "amc": "LIC Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 92.7151,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "147446",
+   "name": "Mahindra Manulife Aggressive Hybrid Fund",
+   "amc": "Mahindra Manulife Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 28.5898,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "149406",
    "name": "Mahindra Manulife Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 15.6886,
@@ -235,7 +645,7 @@
   {
    "code": "140444",
    "name": "Mahindra Manulife Equity Savings Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 25.4016,
@@ -243,9 +653,19 @@
    "aum": null
   },
   {
+   "code": "134813",
+   "name": "Mirae Asset Aggressive Hybrid Fund",
+   "amc": "Mirae Asset Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 38.344,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "150470",
    "name": "Mirae Asset Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 15.203,
@@ -255,7 +675,7 @@
   {
    "code": "145693",
    "name": "Mirae Asset Equity Savings Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 22.839,
@@ -265,7 +685,7 @@
   {
    "code": "139872",
    "name": "Motilal Oswal Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Motilal Oswal Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 21.7417,
@@ -273,9 +693,69 @@
    "aum": null
   },
   {
+   "code": "149264",
+   "name": "NJ Balanced Advantage Fund",
+   "amc": "NJ Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 14.13,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "143163",
+   "name": "Navi Aggressive Hybrid Fund",
+   "amc": "Navi Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 24.9102,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118736",
+   "name": "Nippon India Balanced Advantage Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 203.4025,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "138386",
+   "name": "PGIM India Aggressive Hybrid Equity Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 150.56,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "148658",
+   "name": "PGIM India Balanced Advantage Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 15.9,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "148958",
+   "name": "Parag Parikh Conservative Hybrid Fund",
+   "amc": "PPFAS Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 15.8491,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "152468",
    "name": "Parag Parikh Dynamic Asset Allocation Fund",
-   "amc": "",
+   "amc": "PPFAS Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 11.6341,
@@ -283,9 +763,29 @@
    "aum": null
   },
   {
+   "code": "120819",
+   "name": "Quant Aggressive Hybrid Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 494.8294,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119609",
+   "name": "SBI AGGRESSIVE HYBRID FUND",
+   "amc": "SBI Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 339.217,
+   "date": "31-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "149134",
    "name": "SBI Balanced Advantage Fund",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 16.0021,
@@ -295,7 +795,7 @@
   {
    "code": "154618",
    "name": "SBI Balanced Hybrid Fund",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 9.8177,
@@ -303,9 +803,19 @@
    "aum": null
   },
   {
+   "code": "119839",
+   "name": "SBI CONSERVATIVE HYBRID FUND",
+   "amc": "SBI Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 82.8503,
+   "date": "31-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "152188",
    "name": "Samco Dynamic Asset Allocation Fund",
-   "amc": "",
+   "amc": "Samco Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 10.41,
@@ -313,9 +823,19 @@
    "aum": null
   },
   {
+   "code": "125711",
+   "name": "Shriram Aggressive Hybrid Fund",
+   "amc": "Shriram Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 35.804,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "147406",
    "name": "Shriram Balanced Advantage Fund",
-   "amc": "",
+   "amc": "Shriram Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 18.3188,
@@ -323,9 +843,29 @@
    "aum": null
   },
   {
+   "code": "149601",
+   "name": "Sundaram Aggressive Hybrid Fund (Formerly Known as Principal Hybrid Equity Fund)",
+   "amc": "Sundaram Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 177.4567,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119635",
+   "name": "Sundaram Conservative Hybrid Fund (Formerly Known as Sundaram Debt Oriented Hybrid Fund)",
+   "amc": "Sundaram Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 32.363,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "149717",
    "name": "Sundaram Dynamic Asset Allocation Fund (Formerly Known as Sundaram Balanced Advantage Fund)",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 40.3287,
@@ -333,9 +873,29 @@
    "aum": null
   },
   {
+   "code": "119053",
+   "name": "Tata Aggressive Hybrid Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 472.4069,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "146010",
+   "name": "Tata Balanced Advantage Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 22.2678,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "154185",
    "name": "The Wealth Company Balanced Advantage Fund",
-   "amc": "",
+   "amc": "The Wealth Company Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 9.5121,
@@ -345,7 +905,7 @@
   {
    "code": "153376",
    "name": "UNIFI DYNAMIC ASSET ALLOCATION FUND",
-   "amc": "",
+   "amc": "Unifi Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 11.3944,
@@ -355,7 +915,7 @@
   {
    "code": "144490",
    "name": "UTI - Equity Savings Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 20.0774,
@@ -365,7 +925,7 @@
   {
    "code": "120784",
    "name": "UTI - Unit Linked Insurance Plan",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 45.9136,
@@ -373,9 +933,19 @@
    "aum": null
   },
   {
+   "code": "120674",
+   "name": "UTI Aggressive Hybrid Fund",
+   "amc": "UTI Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 421.1838,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "151885",
    "name": "UTI Balanced Advantage Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Balanced/Hybrid",
    "plan": "Direct Plan",
    "nav": 12.801,
@@ -383,9 +953,99 @@
    "aum": null
   },
   {
+   "code": "154629",
+   "name": "UTI Balanced Hybrid Fund",
+   "amc": "UTI Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Unspecified",
+   "nav": 9.824,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120779",
+   "name": "UTI Conservative Hybrid Fund",
+   "amc": "UTI Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 75.6663,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "148592",
+   "name": "Union Aggressive Hybrid Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 19.18,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "142038",
+   "name": "Union Balanced Advantage Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 21.67,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154392",
+   "name": "WhiteOak Capital Aggressive Hybrid Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 10.112,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151267",
+   "name": "WhiteOak Capital Balanced Advantage Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 15.211,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152132",
+   "name": "WhiteOak Capital Balanced Hybrid Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 13.586,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153355",
+   "name": "WhiteOak Capital Equity Savings Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 11.706,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151713",
+   "name": "quant Dynamic Asset Allocation Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Balanced/Hybrid",
+   "plan": "Direct Plan",
+   "nav": 16.4961,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119544",
    "name": "Aditya Birla Sun Life ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 65.14,
@@ -393,9 +1053,19 @@
    "aum": null
   },
   {
+   "code": "120503",
+   "name": "Axis ELSS- Tax Saver Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 106.8197,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "118473",
    "name": "BANDHAN ELSS - Tax Saver Fund",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 172.906,
@@ -405,7 +1075,7 @@
   {
    "code": "119351",
    "name": "BANK OF INDIA ELSS TAX SAVER FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 184.65,
@@ -415,7 +1085,7 @@
   {
    "code": "153201",
    "name": "Bajaj Finserv ELSS - Tax Saver Fund",
-   "amc": "",
+   "amc": "Bajaj Finserv Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 11.204,
@@ -423,9 +1093,29 @@
    "aum": null
   },
   {
+   "code": "150159",
+   "name": "Baroda BNP Paribas ELSS Tax Saver Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 106.5953,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118285",
+   "name": "Canara Robeco ELSS - Tax Saver Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 192.74,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119242",
    "name": "DSP ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 147.629,
@@ -435,7 +1125,7 @@
   {
    "code": "118620",
    "name": "Edelweiss ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 131.81,
@@ -445,7 +1135,7 @@
   {
    "code": "118540",
    "name": "Franklin India ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 1532.3788,
@@ -455,7 +1145,7 @@
   {
    "code": "141808",
    "name": "Groww ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Groww Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 20.99,
@@ -463,9 +1153,19 @@
    "aum": null
   },
   {
+   "code": "119060",
+   "name": "HDFC ELSS - Tax Saver Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 1434.915,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "151078",
    "name": "HSBC ELSS Tax saver Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 146.367,
@@ -475,7 +1175,7 @@
   {
    "code": "120592",
    "name": "ICICI Prudential ELSS - Tax Saver Fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 985.78,
@@ -483,9 +1183,19 @@
    "aum": null
   },
   {
+   "code": "147541",
+   "name": "ITI ELSS Tax Saver Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 26.3129,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120416",
    "name": "Invesco India ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 143.26,
@@ -493,9 +1203,19 @@
    "aum": null
   },
   {
+   "code": "120494",
+   "name": "JM ELSS - Tax Saver Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 57.2605,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119773",
    "name": "Kotak ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Kotak Mahindra Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 132.516,
@@ -505,7 +1225,7 @@
   {
    "code": "120270",
    "name": "LIC MF ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 161.5523,
@@ -515,7 +1235,7 @@
   {
    "code": "139781",
    "name": "Mahindra Manulife ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 30.9817,
@@ -525,7 +1245,7 @@
   {
    "code": "135781",
    "name": "Mirae Asset ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 53.981,
@@ -535,7 +1255,7 @@
   {
    "code": "133386",
    "name": "Motilal Oswal ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Motilal Oswal Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 61.4572,
@@ -545,7 +1265,7 @@
   {
    "code": "151471",
    "name": "NAVI ELSS TAX SAVER NIFTY50 INDEX FUND",
-   "amc": "",
+   "amc": "Navi Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 14.0358,
@@ -553,9 +1273,39 @@
    "aum": null
   },
   {
+   "code": "151611",
+   "name": "NJ ELSS Tax Saver Fund",
+   "amc": "NJ Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 13.83,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118803",
+   "name": "Nippon India ELSS Tax Saver Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 137.8771,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "135601",
+   "name": "PGIM India ELSS Tax Saver Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 38.62,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "147481",
    "name": "Parag Parikh ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "PPFAS Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 30.8526,
@@ -563,9 +1313,29 @@
    "aum": null
   },
   {
+   "code": "120847",
+   "name": "Quant ELSS Tax Saver Fund",
+   "amc": "quant Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 442.0615,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "111549",
+   "name": "Quantum ELSS Tax Saver Fund",
+   "amc": "Quantum Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 119.38,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119723",
    "name": "SBI ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 441.9245,
@@ -575,7 +1345,7 @@
   {
    "code": "150838",
    "name": "Samco ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Samco Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 13.01,
@@ -585,7 +1355,7 @@
   {
    "code": "145819",
    "name": "Shriram ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Shriram Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 22.4758,
@@ -595,7 +1365,7 @@
   {
    "code": "149570",
    "name": "Sundaram ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 501.5153,
@@ -603,9 +1373,19 @@
    "aum": null
   },
   {
+   "code": "132756",
+   "name": "Tata ELSS - Tax Saver Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 50.6817,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "118866",
    "name": "Taurus ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "Taurus Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 193.28,
@@ -615,7 +1395,7 @@
   {
    "code": "120715",
    "name": "UTI ELSS Tax Saver Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "ELSS (tax saver)",
    "plan": "Direct Plan",
    "nav": 214.7333,
@@ -623,9 +1403,39 @@
    "aum": null
   },
   {
+   "code": "119307",
+   "name": "Union ELSS Tax Saver Fund (Formerly Union Tax Saver (ELSS) Fund",
+   "amc": "Union Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 68.15,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150587",
+   "name": "WhiteOak Capital ELSS Tax Saver Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "ELSS (tax saver)",
+   "plan": "Direct Plan",
+   "nav": 18.411,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151796",
+   "name": "360 ONE Flexicap Fund",
+   "amc": "360 ONE Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 16.3449,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "154043",
    "name": "Abakkus Flexi Cap Fund",
-   "amc": "",
+   "amc": "Abakkus Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 10.479,
@@ -635,7 +1445,7 @@
   {
    "code": "120564",
    "name": "Aditya Birla Sun Life Flexi Cap Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 2119.11,
@@ -645,7 +1455,7 @@
   {
    "code": "148921",
    "name": "Aditya Birla Sun Life Multi-Cap Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 21.63,
@@ -655,7 +1465,7 @@
   {
    "code": "154518",
    "name": "AlphaGrep Flexi Cap Fund",
-   "amc": "",
+   "amc": "AlphaGrep Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 9.5858,
@@ -663,9 +1473,29 @@
    "aum": null
   },
   {
+   "code": "141925",
+   "name": "Axis Flexi Cap Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 30.08,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "149383",
+   "name": "Axis Multicap Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 20.12,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "118424",
    "name": "BANDHAN Flexi Cap Fund",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 222.433,
@@ -675,7 +1505,7 @@
   {
    "code": "149303",
    "name": "BANDHAN MULTI CAP FUND",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 17.743,
@@ -685,7 +1515,7 @@
   {
    "code": "148404",
    "name": "BANK OF INDIA FLEXI CAP FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 40.1,
@@ -695,7 +1525,7 @@
   {
    "code": "151443",
    "name": "BANK OF INDIA MULTI CAP FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 19.69,
@@ -705,7 +1535,7 @@
   {
    "code": "151895",
    "name": "Bajaj Finserv Flexi Cap Fund",
-   "amc": "",
+   "amc": "Bajaj Finserv Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 15.617,
@@ -715,7 +1545,7 @@
   {
    "code": "153309",
    "name": "Bajaj Finserv Multi Cap Fund",
-   "amc": "",
+   "amc": "Bajaj Finserv Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 11.734,
@@ -723,9 +1553,49 @@
    "aum": null
   },
   {
+   "code": "150387",
+   "name": "Baroda BNP Paribas Flexi Cap Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 15.8483,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119354",
+   "name": "Baroda BNP Paribas Multi Cap Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 315.3681,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118275",
+   "name": "Canara Robeco Flexi Cap Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 371.28,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151824",
+   "name": "Canara Robeco Multi Cap Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 14.7,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "153738",
    "name": "Capitalmind Flexi Cap Fund",
-   "amc": "",
+   "amc": "Capitalmind Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 10.0215,
@@ -735,7 +1605,7 @@
   {
    "code": "119076",
    "name": "DSP Flexi Cap Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 109.494,
@@ -745,7 +1615,7 @@
   {
    "code": "152310",
    "name": "DSP Multi Cap Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 11.892,
@@ -755,7 +1625,7 @@
   {
    "code": "140353",
    "name": "Edelweiss Flexi Cap Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 43.329,
@@ -765,7 +1635,7 @@
   {
    "code": "152094",
    "name": "Edelweiss Multi Cap Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 15.5376,
@@ -775,7 +1645,7 @@
   {
    "code": "118535",
    "name": "Franklin India Flexi Cap Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 1706.1334,
@@ -785,7 +1655,7 @@
   {
    "code": "152739",
    "name": "Franklin India Multi Cap Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 10.6106,
@@ -795,7 +1665,7 @@
   {
    "code": "153034",
    "name": "Groww Multicap Fund",
-   "amc": "",
+   "amc": "Groww Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 11.9435,
@@ -803,9 +1673,29 @@
    "aum": null
   },
   {
+   "code": "118955",
+   "name": "HDFC Flexi Cap Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 2187.57,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "149368",
+   "name": "HDFC Multi Cap Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 18.5,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120046",
    "name": "HSBC Flexi Cap Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 248.8011,
@@ -815,7 +1705,7 @@
   {
    "code": "151290",
    "name": "HSBC Multi Cap Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 19.8555,
@@ -825,7 +1715,7 @@
   {
    "code": "152135",
    "name": "Helios Flexi Cap Fund",
-   "amc": "",
+   "amc": "Helios Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 15.41,
@@ -835,7 +1725,7 @@
   {
    "code": "148990",
    "name": "ICICI Prudential Flexi Cap fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 20.79,
@@ -845,7 +1735,7 @@
   {
    "code": "120599",
    "name": "ICICI Prudential Multi Cap Fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 878.41,
@@ -853,9 +1743,29 @@
    "aum": null
   },
   {
+   "code": "151379",
+   "name": "ITI Flexi Cap Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 20.3487,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "147183",
+   "name": "ITI Multi Cap Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 28.6942,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "149763",
    "name": "Invesco India Flexi Cap Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 19.97,
@@ -865,7 +1775,7 @@
   {
    "code": "120413",
    "name": "Invesco India Multi Cap Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 150.84,
@@ -873,9 +1783,29 @@
    "aum": null
   },
   {
+   "code": "120492",
+   "name": "JM Flexi Cap Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 108.0429,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153859",
+   "name": "JioBlackRock Flexi Cap Fund",
+   "amc": "Jio BlackRock Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 9.3435,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120166",
    "name": "Kotak Flexi Cap Fund",
-   "amc": "",
+   "amc": "Kotak Mahindra Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 91.733,
@@ -885,7 +1815,7 @@
   {
    "code": "149185",
    "name": "Kotak Multi Cap Fund",
-   "amc": "",
+   "amc": "Kotak Mahindra Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 20.324,
@@ -895,7 +1825,7 @@
   {
    "code": "120264",
    "name": "LIC MF Flexi Cap Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 109.0698,
@@ -905,7 +1835,7 @@
   {
    "code": "150659",
    "name": "LIC MF Multi Cap Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 18.71,
@@ -915,7 +1845,7 @@
   {
    "code": "149104",
    "name": "Mahindra Manulife Flexi Cap Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 16.3717,
@@ -925,7 +1855,7 @@
   {
    "code": "141226",
    "name": "Mahindra Manulife Multi Cap Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 43.5143,
@@ -935,7 +1865,7 @@
   {
    "code": "151412",
    "name": "Mirae Asset Flexi Cap Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 16.384,
@@ -945,7 +1875,7 @@
   {
    "code": "151810",
    "name": "Mirae Asset Multicap Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 14.299,
@@ -955,7 +1885,7 @@
   {
    "code": "129046",
    "name": "Motilal Oswal Flexi Cap Fund",
-   "amc": "",
+   "amc": "Motilal Oswal Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 67.6101,
@@ -963,9 +1893,29 @@
    "aum": null
   },
   {
+   "code": "152650",
+   "name": "Motilal Oswal Multi Cap Fund",
+   "amc": "Motilal Oswal Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Unspecified",
+   "nav": 14.4145,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151917",
+   "name": "NJ Flexi Cap Fund",
+   "amc": "NJ Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 12.97,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "143793",
    "name": "Navi Flexi Cap Fund",
-   "amc": "",
+   "amc": "Navi Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 27.6602,
@@ -973,9 +1923,59 @@
    "aum": null
   },
   {
+   "code": "149094",
+   "name": "Nippon India Flexi Cap Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 16.7714,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118650",
+   "name": "Nippon India Multi Cap Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 309.7157,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154225",
+   "name": "Old Bridge Flexi Cap Fund",
+   "amc": "Old Bridge Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 10.28,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "133839",
+   "name": "PGIM India Flexi Cap Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 41.91,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152815",
+   "name": "PGIM India Multi Cap Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 10.45,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "122639",
    "name": "Parag Parikh Flexi Cap Fund",
-   "amc": "",
+   "amc": "PPFAS Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 89.2332,
@@ -983,9 +1983,39 @@
    "aum": null
   },
   {
+   "code": "120843",
+   "name": "Quant Flexi Cap Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 114.7275,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120823",
+   "name": "Quant Multi Cap Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 690.7462,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154515",
+   "name": "Quantum Flexi Cap Fund",
+   "amc": "Quantum Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 9.47,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119718",
    "name": "SBI FLEXICAP FUND",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 116.2461,
@@ -995,7 +2025,7 @@
   {
    "code": "149882",
    "name": "SBI MultiCap Fund",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 16.8638,
@@ -1005,7 +2035,7 @@
   {
    "code": "152847",
    "name": "Samco Multi Cap Fund",
-   "amc": "",
+   "amc": "Samco Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 9.06,
@@ -1015,7 +2045,7 @@
   {
    "code": "144905",
    "name": "Shriram Flexi Cap Fund",
-   "amc": "",
+   "amc": "Shriram Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 21.4814,
@@ -1025,7 +2055,7 @@
   {
    "code": "150571",
    "name": "Sundaram Flexicap Fund",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 14.3481,
@@ -1035,7 +2065,7 @@
   {
    "code": "149669",
    "name": "Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 410.721,
@@ -1043,9 +2073,19 @@
    "aum": null
   },
   {
+   "code": "151232",
+   "name": "TATA MULTICAP FUND",
+   "amc": "Tata Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 15.248,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "152584",
    "name": "TRUSTMF Flexi Cap Fund",
-   "amc": "",
+   "amc": "Trust Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 12.34,
@@ -1055,7 +2095,7 @@
   {
    "code": "153644",
    "name": "TRUSTMF MULTI CAP FUND",
-   "amc": "",
+   "amc": "Trust Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 11.51,
@@ -1063,9 +2103,19 @@
    "aum": null
   },
   {
+   "code": "144546",
+   "name": "Tata Flexi Cap Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 25.0272,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "118883",
    "name": "Taurus Flexi Cap Fund",
-   "amc": "",
+   "amc": "Taurus Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 242.62,
@@ -1075,7 +2125,7 @@
   {
    "code": "153872",
    "name": "The Wealth Company Flexi Cap Fund",
-   "amc": "",
+   "amc": "The Wealth Company Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 9.2185,
@@ -1085,7 +2135,7 @@
   {
    "code": "154663",
    "name": "The Wealth Company Multi Cap Fund",
-   "amc": "",
+   "amc": "The Wealth Company Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 9.5108,
@@ -1095,7 +2145,7 @@
   {
    "code": "153543",
    "name": "UNIFI FLEXI CAP FUND",
-   "amc": "",
+   "amc": "Unifi Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 10.5554,
@@ -1105,7 +2155,7 @@
   {
    "code": "120662",
    "name": "UTI - Flexi Cap Fund.",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 336.2532,
@@ -1115,7 +2165,7 @@
   {
    "code": "153515",
    "name": "UTI Multi Cap Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Flexi/Multi cap",
    "plan": "Direct Plan",
    "nav": 10.2135,
@@ -1123,9 +2173,49 @@
    "aum": null
   },
   {
+   "code": "119292",
+   "name": "Union Flexi Cap Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 56.71,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150858",
+   "name": "Union Multicap Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 17.49,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150346",
+   "name": "WhiteOak Capital Flexi Cap Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 18.245,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152071",
+   "name": "WhiteOak Capital Multi Cap Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Flexi/Multi cap",
+   "plan": "Direct Plan",
+   "nav": 16.075,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "154477",
    "name": "Abakkus Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Abakkus Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 9.224,
@@ -1135,7 +2225,7 @@
   {
    "code": "119436",
    "name": "Aditya Birla Sun Life Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 1005.86,
@@ -1143,9 +2233,19 @@
    "aum": null
   },
   {
+   "code": "145110",
+   "name": "Axis Large & Mid Cap Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 37.2,
+   "date": "29-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119350",
    "name": "BANK OF INDIA LARGE & MID CAP FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 103.09,
@@ -1155,7 +2255,7 @@
   {
    "code": "152408",
    "name": "Bajaj Finserv Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Bajaj Finserv Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 12.045,
@@ -1165,7 +2265,7 @@
   {
    "code": "118419",
    "name": "Bandhan Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 157.077,
@@ -1173,9 +2273,29 @@
    "aum": null
   },
   {
+   "code": "148474",
+   "name": "Baroda BNP Paribas Large and Mid Cap fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 28.4984,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118278",
+   "name": "Canara Robeco Large and Mid Cap Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 282.16,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119218",
    "name": "DSP Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 657.556,
@@ -1185,7 +2305,7 @@
   {
    "code": "140175",
    "name": "Edelweiss Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 101.652,
@@ -1195,7 +2315,7 @@
   {
    "code": "118510",
    "name": "Franklin India Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 196.3596,
@@ -1203,9 +2323,19 @@
    "aum": null
   },
   {
+   "code": "130498",
+   "name": "HDFC Large & Mid Cap Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 344.939,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "146772",
    "name": "HSBC Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 31.507,
@@ -1215,7 +2345,7 @@
   {
    "code": "152941",
    "name": "Helios Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Helios Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 11.07,
@@ -1225,7 +2355,7 @@
   {
    "code": "120596",
    "name": "ICICI Prudential Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 1065.31,
@@ -1233,9 +2363,19 @@
    "aum": null
   },
   {
+   "code": "152821",
+   "name": "ITI Large & Mid Cap Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 9.6979,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120357",
    "name": "Invesco India Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 125.05,
@@ -1243,9 +2383,19 @@
    "aum": null
   },
   {
+   "code": "153629",
+   "name": "JM Large & Mid Cap Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 10.1963,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120158",
    "name": "Kotak Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Kotak Mahindra Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 382.264,
@@ -1255,7 +2405,7 @@
   {
    "code": "133710",
    "name": "LIC MF Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 41.9308,
@@ -1265,7 +2415,7 @@
   {
    "code": "147840",
    "name": "Mahindra Manulife Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 29.8636,
@@ -1275,7 +2425,7 @@
   {
    "code": "118834",
    "name": "Mirae Asset Large & Midcap Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 166.946,
@@ -1285,7 +2435,7 @@
   {
    "code": "147704",
    "name": "Motilal Oswal Large and Midcap Fund",
-   "amc": "",
+   "amc": "Motilal Oswal Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 38.5563,
@@ -1295,7 +2445,7 @@
   {
    "code": "135677",
    "name": "Navi Large & Midcap Fund",
-   "amc": "",
+   "amc": "Navi Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 41.7593,
@@ -1303,9 +2453,39 @@
    "aum": null
   },
   {
+   "code": "118678",
+   "name": "Nippon India Vision Large & Mid Cap Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 1506.692,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152382",
+   "name": "PGIM India Large and Midcap Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 12.52,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120826",
+   "name": "Quant Large & Mid Cap Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 133.6429,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119721",
    "name": "SBI LARGE & MIDCAP FUND",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 657.5161,
@@ -1315,7 +2495,7 @@
   {
    "code": "153534",
    "name": "Samco Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "Samco Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 9.05,
@@ -1325,7 +2505,7 @@
   {
    "code": "119566",
    "name": "Sundaram Large and Midcap Fund",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 96.8645,
@@ -1335,7 +2515,7 @@
   {
    "code": "154433",
    "name": "TRUSTMF LARGE & MIDCAP FUND",
-   "amc": "",
+   "amc": "Trust Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 9.69,
@@ -1343,9 +2523,19 @@
    "aum": null
   },
   {
+   "code": "119202",
+   "name": "Tata Large & Mid Cap Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 521.9857,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "154381",
    "name": "The Wealth Company Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "The Wealth Company Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 9.4722,
@@ -1355,7 +2545,7 @@
   {
    "code": "120665",
    "name": "UTI Large & Mid Cap Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Large & Mid cap",
    "plan": "Direct Plan",
    "nav": 187.9192,
@@ -1363,9 +2553,29 @@
    "aum": null
   },
   {
+   "code": "147750",
+   "name": "Union Large & Midcap Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 28.14,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152226",
+   "name": "WhiteOak Capital Large & Mid Cap Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Large & Mid cap",
+   "plan": "Direct Plan",
+   "nav": 13.692,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119528",
    "name": "Aditya Birla Sun Life Large Cap Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 554.53,
@@ -1373,9 +2583,19 @@
    "aum": null
   },
   {
+   "code": "120465",
+   "name": "Axis Large Cap Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 67.6,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "152783",
    "name": "BAJAJ FINSERV LARGE CAP FUND",
-   "amc": "",
+   "amc": "Bajaj Finserv Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 9.995,
@@ -1385,7 +2605,7 @@
   {
    "code": "118479",
    "name": "BANDHAN LARGE CAP FUND",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 87.691,
@@ -1395,7 +2615,7 @@
   {
    "code": "148980",
    "name": "BANK OF INDIA LARGE CAP FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 17.01,
@@ -1403,9 +2623,29 @@
    "aum": null
   },
   {
+   "code": "150187",
+   "name": "BARODA BNP PARIBAS LARGE CAP FUND",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 248.381,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118269",
+   "name": "Canara Robeco Large Cap Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 69.35,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119250",
    "name": "DSP Large Cap Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 484.707,
@@ -1415,7 +2655,7 @@
   {
    "code": "118617",
    "name": "Edelweiss Large Cap Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 93.92,
@@ -1425,7 +2665,7 @@
   {
    "code": "118531",
    "name": "Franklin India Large Cap Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 1092.7719,
@@ -1435,7 +2675,7 @@
   {
    "code": "119133",
    "name": "Groww Large Cap Fund",
-   "amc": "",
+   "amc": "Groww Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 50.22,
@@ -1443,9 +2683,19 @@
    "aum": null
   },
   {
+   "code": "119018",
+   "name": "HDFC Large Cap Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 1164.952,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120030",
    "name": "HSBC Large Cap Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 513.7904,
@@ -1455,7 +2705,7 @@
   {
    "code": "120586",
    "name": "ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund)",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 113.46,
@@ -1463,9 +2713,19 @@
    "aum": null
   },
   {
+   "code": "148353",
+   "name": "ITI Large Cap Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 18.6704,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120392",
    "name": "Invesco India Large Cap Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 84.4,
@@ -1473,9 +2733,29 @@
    "aum": null
   },
   {
+   "code": "120490",
+   "name": "JM Large Cap Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 171.669,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154307",
+   "name": "JioBlackRock Large Cap Fund",
+   "amc": "Jio BlackRock Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 9.4165,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120152",
    "name": "Kotak Large Cap Fund",
-   "amc": "",
+   "amc": "Kotak Mahindra Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 624.245,
@@ -1485,7 +2765,7 @@
   {
    "code": "120267",
    "name": "LIC MF Large Cap Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 58.6698,
@@ -1495,7 +2775,7 @@
   {
    "code": "146549",
    "name": "Mahindra Manulife Large Cap Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 24.2171,
@@ -1505,7 +2785,7 @@
   {
    "code": "118825",
    "name": "Mirae Asset Large Cap Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 121.46,
@@ -1513,9 +2793,39 @@
    "aum": null
   },
   {
+   "code": "152354",
+   "name": "Motilal Oswal Large Cap Fund",
+   "amc": "Motilal Oswal Mutual Fund",
+   "category": "Large cap",
+   "plan": "Unspecified",
+   "nav": 13.5928,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118632",
+   "name": "Nippon India Large Cap Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 96.0377,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "138312",
+   "name": "PGIM India Large Cap Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 386.29,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "154155",
    "name": "Parag Parikh Large Cap Fund",
-   "amc": "",
+   "amc": "PPFAS Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 9.204,
@@ -1525,7 +2835,7 @@
   {
    "code": "119598",
    "name": "SBI Large Cap Fund",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 99.5609,
@@ -1535,7 +2845,7 @@
   {
    "code": "153239",
    "name": "Samco Large Cap Fund",
-   "amc": "",
+   "amc": "Samco Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 8.9,
@@ -1545,7 +2855,7 @@
   {
    "code": "148507",
    "name": "Sundaram Large Cap Fund ( Formerly Know as Sundaram Blue Chip Fund)",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 21.8245,
@@ -1553,9 +2863,19 @@
    "aum": null
   },
   {
+   "code": "119160",
+   "name": "Tata Large Cap Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 561.826,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "118870",
    "name": "Taurus Large Cap Fund",
-   "amc": "",
+   "amc": "Taurus Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 177.24,
@@ -1565,7 +2885,7 @@
   {
    "code": "120656",
    "name": "UTI - Large Cap Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Large cap",
    "plan": "Direct Plan",
    "nav": 283.5408,
@@ -1573,9 +2893,39 @@
    "aum": null
   },
   {
+   "code": "141248",
+   "name": "Union Largecap Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 23.73,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150797",
+   "name": "WhiteOak Capital Large Cap Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 15.187,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150440",
+   "name": "quant Large Cap Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Large cap",
+   "plan": "Direct Plan",
+   "nav": 16.1684,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119620",
    "name": "Aditya Birla Sun Life Midcap Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 875.73,
@@ -1583,9 +2933,19 @@
    "aum": null
   },
   {
+   "code": "120505",
+   "name": "Axis Midcap Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 136.47,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "150404",
    "name": "BANDHAN MID CAP FUND",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 19.333,
@@ -1595,7 +2955,7 @@
   {
    "code": "153728",
    "name": "BANK OF INDIA MID CAP FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 9.95,
@@ -1603,9 +2963,29 @@
    "aum": null
   },
   {
+   "code": "150212",
+   "name": "Baroda BNP Paribas Mid Cap Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 124.9134,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150817",
+   "name": "Canara Robeco Mid Cap Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 18.04,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119071",
    "name": "DSP Midcap Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 160.022,
@@ -1615,7 +2995,7 @@
   {
    "code": "140228",
    "name": "Edelweiss Mid Cap Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 118.956,
@@ -1625,7 +3005,7 @@
   {
    "code": "118533",
    "name": "Franklin India Mid Cap Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 2903.8492,
@@ -1633,9 +3013,19 @@
    "aum": null
   },
   {
+   "code": "118989",
+   "name": "HDFC Mid Cap Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 215.986,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "151036",
    "name": "HSBC Midcap Fund",
-   "amc": "",
+   "amc": "HSBC Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 502.2936,
@@ -1645,7 +3035,7 @@
   {
    "code": "153326",
    "name": "Helios Mid Cap Fund",
-   "amc": "",
+   "amc": "Helios Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 13.2,
@@ -1655,7 +3045,7 @@
   {
    "code": "120381",
    "name": "ICICI Prudential Mid Cap Fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 351.92,
@@ -1663,9 +3053,19 @@
    "aum": null
   },
   {
+   "code": "148733",
+   "name": "ITI Mid Cap Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 23.543,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120403",
    "name": "Invesco India Mid Cap Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 223.87,
@@ -1673,9 +3073,19 @@
    "aum": null
   },
   {
+   "code": "150815",
+   "name": "JM Mid Cap Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 20.7892,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119775",
    "name": "Kotak Mid Cap Fund",
-   "amc": "",
+   "amc": "Kotak Mahindra Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 155.011,
@@ -1685,7 +3095,7 @@
   {
    "code": "152002",
    "name": "LIC MF Mid Cap Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 31.9207,
@@ -1695,7 +3105,7 @@
   {
    "code": "142110",
    "name": "Mahindra Manulife Mid Cap Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 37.497,
@@ -1705,7 +3115,7 @@
   {
    "code": "147445",
    "name": "Mirae Asset Midcap Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 40.224,
@@ -1713,9 +3123,49 @@
    "aum": null
   },
   {
+   "code": "127044",
+   "name": "Motilal Oswal Midcap Fund",
+   "amc": "Motilal Oswal Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Unspecified",
+   "nav": 45.4527,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "118668",
+   "name": "Nippon India Growth Mid Cap Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 4611.2203,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "125307",
+   "name": "PGIM India Midcap Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 72.91,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120841",
+   "name": "Quant Mid Cap Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 236.1921,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119716",
    "name": "SBI MIDCAP FUND",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 249.7708,
@@ -1725,7 +3175,7 @@
   {
    "code": "154114",
    "name": "Samco Mid Cap Fund",
-   "amc": "",
+   "amc": "Samco Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 9.53,
@@ -1735,7 +3185,7 @@
   {
    "code": "119581",
    "name": "Sundaram Mid Cap Fund",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 1508.1232,
@@ -1745,7 +3195,7 @@
   {
    "code": "154210",
    "name": "TRUSTMF MID CAP FUND",
-   "amc": "",
+   "amc": "Trust Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 11.46,
@@ -1753,9 +3203,19 @@
    "aum": null
   },
   {
+   "code": "119178",
+   "name": "Tata Mid Cap Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 492.5189,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "118872",
    "name": "Taurus Mid Cap Fund",
-   "amc": "",
+   "amc": "Taurus Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 130.33,
@@ -1765,7 +3225,7 @@
   {
    "code": "154481",
    "name": "The Wealth Company Mid Cap Fund",
-   "amc": "",
+   "amc": "The Wealth Company Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 9.0487,
@@ -1775,7 +3235,7 @@
   {
    "code": "120726",
    "name": "UTI - Mid Cap Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Mid cap",
    "plan": "Direct Plan",
    "nav": 328.4311,
@@ -1783,9 +3243,399 @@
    "aum": null
   },
   {
+   "code": "148073",
+   "name": "Union Midcap Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 53.4,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150584",
+   "name": "WhiteOak Capital Mid Cap Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Mid cap",
+   "plan": "Direct Plan",
+   "nav": 21.982,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153774",
+   "name": "360 ONE Multi Asset Allocation Fund",
+   "amc": "360 ONE Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 11.7988,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151307",
+   "name": "Aditya Birla Sun Life Multi Asset Allocation Fund",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 17.0045,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154438",
+   "name": "AlphaGrep Multi Asset Allocation Fund",
+   "amc": "AlphaGrep Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 10.1286,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120524",
+   "name": "Axis Multi Asset Allocation Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 50.7953,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152324",
+   "name": "BANDHAN MULTI ASSET ALLOCATION FUND",
+   "amc": "Bandhan Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 14.085,
+   "date": "31-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152639",
+   "name": "Bajaj Finserv Multi Asset Allocation Fund",
+   "amc": "Bajaj Finserv Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 12.0106,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152396",
+   "name": "Bank of India Multi Asset Allocation Fund",
+   "amc": "Bank of India Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 12.4046,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "150865",
+   "name": "Baroda BNP Paribas Multi Asset Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 16.1482,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153465",
+   "name": "Canara Robeco Multi Asset Allocation Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 11.0,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154232",
+   "name": "Capitalmind Multi Asset Allocation Fund",
+   "amc": "Capitalmind Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 9.5449,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152056",
+   "name": "DSP Multi Asset Allocation Fund",
+   "amc": "DSP Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 16.0169,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151792",
+   "name": "Edelweiss Multi Asset Allocation Fund",
+   "amc": "Edelweiss Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 12.7239,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153731",
+   "name": "Franklin India Multi Asset Allocation Fund",
+   "amc": "Franklin Templeton Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 10.5555,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153821",
+   "name": "Groww Multi Asset Allocation Fund",
+   "amc": "Groww Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 10.0058,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119131",
+   "name": "HDFC Multi Asset Allocation Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 81.632,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152380",
+   "name": "HSBC Multi Asset Allocation Fund",
+   "amc": "HSBC Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 13.7632,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120334",
+   "name": "ICICI Prudential Multi Asset Allocation Fund",
+   "amc": "ICICI Prudential Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 852.6109,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154498",
+   "name": "ITI Multi Asset Allocation Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 9.5729,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153047",
+   "name": "Invesco India Multi Asset Allocation Fund",
+   "amc": "Invesco Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 12.25,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "154423",
+   "name": "JM Multi Asset Allocation Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 9.7467,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152064",
+   "name": "Kotak Multi Asset Allocation Fund",
+   "amc": "Kotak Mahindra Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 15.508,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153246",
+   "name": "LIC MF Multi Asset Allocation Fund",
+   "amc": "LIC Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 11.7588,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152443",
+   "name": "Mahindra Manulife Multi Asset Allocation Fund",
+   "amc": "Mahindra Manulife Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 13.922,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152344",
+   "name": "Mirae Asset Multi Asset Allocation Fund",
+   "amc": "Mirae Asset Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 13.666,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "148457",
+   "name": "Nippon India Multi Asset Allocation Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 25.7137,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153987",
+   "name": "PGIM India Multi Asset Allocation Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 10.12,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120821",
+   "name": "Quant Multi Asset Allocation Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 175.9491,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152474",
+   "name": "Quantum Multi Asset Allocation Fund",
+   "amc": "Quantum Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 11.89,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "119843",
+   "name": "SBI MULTI ASSET ALLOCATION FUND",
+   "amc": "SBI Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 71.3942,
+   "date": "31-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153092",
+   "name": "Samco Multi Asset Allocation Fund",
+   "amc": "Samco Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 11.99,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152051",
+   "name": "Shriram Multi Asset Allocation Fund",
+   "amc": "Shriram Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 13.2902,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152314",
+   "name": "Sundaram Multi Asset Allocation Fund",
+   "amc": "Sundaram Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 13.0237,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "148053",
+   "name": "Tata Multi Asset Allocation Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 26.6783,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "153999",
+   "name": "The Wealth Company Multi Asset Allocation Fund",
+   "amc": "The Wealth Company Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 10.4051,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120760",
+   "name": "UTI Multi Asset Allocation Fund",
+   "amc": "UTI Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 84.2408,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152787",
+   "name": "Union Multi Asset Allocation Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 11.91,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151745",
+   "name": "WhiteOak Capital Multi Asset Allocation Fund",
+   "amc": "WhiteOak Capital Mutual Fund",
+   "category": "Multi asset",
+   "plan": "Direct Plan",
+   "nav": 16.281,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "154215",
    "name": "Abakkus Small Cap Fund",
-   "amc": "",
+   "amc": "Abakkus Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 11.57,
@@ -1795,7 +3645,7 @@
   {
    "code": "119556",
    "name": "Aditya Birla Sun Life Small Cap Fund",
-   "amc": "",
+   "amc": "Aditya Birla Sun Life Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 107.6267,
@@ -1803,9 +3653,19 @@
    "aum": null
   },
   {
+   "code": "125354",
+   "name": "Axis Small Cap Fund",
+   "amc": "Axis Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 126.97,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "147946",
    "name": "BANDHAN Small Cap Fund",
-   "amc": "",
+   "amc": "Bandhan Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 53.228,
@@ -1815,7 +3675,7 @@
   {
    "code": "145678",
    "name": "BANK OF INDIA SMALL CAP FUND",
-   "amc": "",
+   "amc": "Bank of India Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 61.83,
@@ -1825,7 +3685,7 @@
   {
    "code": "153612",
    "name": "Bajaj Finserv Small Cap Fund",
-   "amc": "",
+   "amc": "Bajaj Finserv Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 10.674,
@@ -1833,9 +3693,29 @@
    "aum": null
   },
   {
+   "code": "152128",
+   "name": "Baroda BNP Paribas Small Cap Fund",
+   "amc": "Baroda BNP Paribas Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 13.7399,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "146130",
+   "name": "Canara Robeco Small Cap Fund",
+   "amc": "Canara Robeco Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 41.73,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "119212",
    "name": "DSP Small Cap Fund",
-   "amc": "",
+   "amc": "DSP Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 237.226,
@@ -1845,7 +3725,7 @@
   {
    "code": "146196",
    "name": "Edelweiss Small Cap Fund",
-   "amc": "",
+   "amc": "Edelweiss Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 49.122,
@@ -1855,7 +3735,7 @@
   {
    "code": "118525",
    "name": "Franklin India Small Cap Fund",
-   "amc": "",
+   "amc": "Franklin Templeton Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 185.1973,
@@ -1865,7 +3745,7 @@
   {
    "code": "154063",
    "name": "Groww Small Cap Fund",
-   "amc": "",
+   "amc": "Groww Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 12.0872,
@@ -1873,9 +3753,29 @@
    "aum": null
   },
   {
+   "code": "130503",
+   "name": "HDFC Small Cap Fund",
+   "amc": "HDFC Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 148.615,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "151130",
+   "name": "HSBC Small Cap Fund",
+   "amc": "HSBC Mutual Fund",
+   "category": "Small cap",
+   "plan": "Unspecified",
+   "nav": 93.2503,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "153912",
    "name": "Helios Small Cap Fund",
-   "amc": "",
+   "amc": "Helios Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 10.87,
@@ -1885,7 +3785,7 @@
   {
    "code": "120591",
    "name": "ICICI Prudential Small Cap Fund",
-   "amc": "",
+   "amc": "ICICI Prudential Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 95.7,
@@ -1893,9 +3793,19 @@
    "aum": null
   },
   {
+   "code": "147919",
+   "name": "ITI Small Cap Fund",
+   "amc": "ITI Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 36.0751,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "145137",
    "name": "Invesco India Small Cap Fund",
-   "amc": "",
+   "amc": "Invesco Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 51.1,
@@ -1903,9 +3813,19 @@
    "aum": null
   },
   {
+   "code": "152614",
+   "name": "JM Small Cap Fund",
+   "amc": "JM Financial Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 11.0434,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "120164",
    "name": "Kotak Small Cap Fund",
-   "amc": "",
+   "amc": "Kotak Mahindra Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 300.837,
@@ -1915,7 +3835,7 @@
   {
    "code": "152004",
    "name": "LIC MF Small Cap Fund",
-   "amc": "",
+   "amc": "LIC Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 37.1474,
@@ -1925,7 +3845,7 @@
   {
    "code": "150915",
    "name": "Mahindra Manulife Small Cap Fund",
-   "amc": "",
+   "amc": "Mahindra Manulife Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 22.3851,
@@ -1935,7 +3855,7 @@
   {
    "code": "153196",
    "name": "Mirae Asset Small Cap Fund",
-   "amc": "",
+   "amc": "Mirae Asset Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 11.957,
@@ -1945,7 +3865,7 @@
   {
    "code": "152237",
    "name": "Motilal Oswal Small Cap Fund",
-   "amc": "",
+   "amc": "Motilal Oswal Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 16.4684,
@@ -1953,9 +3873,49 @@
    "aum": null
   },
   {
+   "code": "118778",
+   "name": "Nippon India Small Cap Fund",
+   "amc": "Nippon India Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 192.758,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "149019",
+   "name": "PGIM India Small Cap Fund",
+   "amc": "PGIM India Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 18.81,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "152107",
+   "name": "QUANTUM SMALL CAP FUND",
+   "amc": "Quantum Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 12.89,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "120828",
+   "name": "Quant Small Cap Fund",
+   "amc": "quant Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 297.724,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "125497",
    "name": "SBI SMALL CAP FUND",
-   "amc": "",
+   "amc": "SBI Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 197.8812,
@@ -1965,7 +3925,7 @@
   {
    "code": "153868",
    "name": "Samco Small Cap Fund",
-   "amc": "",
+   "amc": "Samco Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 12.15,
@@ -1975,7 +3935,7 @@
   {
    "code": "119589",
    "name": "Sundaram Small Cap Fund",
-   "amc": "",
+   "amc": "Sundaram Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 305.541,
@@ -1985,7 +3945,7 @@
   {
    "code": "152939",
    "name": "TRUSTMF SMALL CAP FUND",
-   "amc": "",
+   "amc": "Trust Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 13.33,
@@ -1993,9 +3953,19 @@
    "aum": null
   },
   {
+   "code": "145206",
+   "name": "Tata Small Cap Fund",
+   "amc": "Tata Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 39.9037,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
    "code": "154269",
    "name": "The Wealth Company Small Cap Fund",
-   "amc": "",
+   "amc": "The Wealth Company Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 10.8854,
@@ -2005,10 +3975,20 @@
   {
    "code": "148618",
    "name": "UTI Small Cap Fund",
-   "amc": "",
+   "amc": "UTI Mutual Fund",
    "category": "Small cap",
    "plan": "Direct Plan",
    "nav": 27.6725,
+   "date": "30-Oct-2026",
+   "aum": null
+  },
+  {
+   "code": "129649",
+   "name": "Union Small Cap Fund",
+   "amc": "Union Mutual Fund",
+   "category": "Small cap",
+   "plan": "Direct Plan",
+   "nav": 62.58,
    "date": "30-Oct-2026",
    "aum": null
   }

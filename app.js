@@ -76,6 +76,11 @@ function scoreGroup(group, weights) {
 
 /* ---------------- data ---------------- */
 function buildFunds() {
+  // Only surface a fund if it has enough history for the selected window.
+  // A 5-year view hides funds with under ~5 years of data; 3-year hides <3y;
+  // 1-year hides <~1y. (Small 0.25y tolerance so a "just under" fund isn't
+  // unfairly dropped.) Everything downstream (ranking, table, tabs) uses this.
+  const MIN_AGE = state.years - 0.25;
   FUNDS = (META.funds || []).map(f => {
     const rec = AGG.funds ? AGG.funds[f.code] : null;
     const s = rec ? rec["" + state.years + "y"] : null;
@@ -85,8 +90,10 @@ function buildFunds() {
       aum: f.aum, rec,
       s: { ...s, ir: s.info, cagr: s.cagr, vol: s.vol, sharpe: s.sharpe, er: rec.er },
       age: rec.ageYrs != null ? rec.ageYrs : s.n / 250,
+      // usable points in the requested window; a 3-year-old fund shows ~750 in 5y
+      nPts: s.n,
     };
-  }).filter(Boolean);
+  }).filter(f => f && f.age >= MIN_AGE);
 }
 
 async function init() {
@@ -149,13 +156,30 @@ function buildUI() {
   wr.querySelectorAll("input").forEach(el => el.oninput = e => {
     W[el.dataset.k] = +e.target.value;
     document.getElementById("wv_" + el.dataset.k).textContent = e.target.value;
-    saveWeights(); refreshAll();
+    updateTotal(); saveWeights(); refreshAll();
   });
+
+  // weights are a 100% budget: show the running total and offer a one-click
+  // rescale of every slider so they add up to exactly 100.
+  $("#balanceW").onclick = () => {
+    const total = FACTOR_DEFS.reduce((s, f) => s + (W[f[0]] || 0), 0);
+    if (total === 0) return;               // nothing to rescale
+    FACTOR_DEFS.forEach(([k]) => W[k] = Math.max(0, Math.round(W[k] * 100 / total)));
+    const drift = 100 - FACTOR_DEFS.reduce((s, f) => s + W[f[0]], 0);
+    const active = FACTOR_DEFS.map(f => f[0]).filter(k => W[k]);
+    if (active.length) {
+      active.sort((a, b) => W[b] - W[a]);
+      W[active[0]] += drift;
+    }
+    refreshSliders(); saveWeights(); refreshAll();
+  };
 
   $("#resetW").onclick = () => { W = Object.assign({}, DEF_W); refreshSliders(); saveWeights(); refreshAll(); };
   $("#randW").onclick = () => { FACTOR_DEFS.forEach(([k]) => W[k] = Math.floor(Math.random() * 5) * 5); refreshSliders(); saveWeights(); refreshAll(); };
   $("#shareW").onclick = shareView;
   $("#howBtn").onclick = () => { const h = $("#how"); h.hidden = !h.hidden; h.scrollIntoView({ behavior: "smooth" }); };
+
+  updateTotal();
 
   const cats = ["All"].concat([...new Set(META.funds.map(f => f.category).filter(Boolean))].sort());
   const tabs = $("#tabs");
@@ -189,6 +213,15 @@ function refreshSliders() {
     el.value = W[el.dataset.k];
     document.getElementById("wv_" + el.dataset.k).textContent = W[el.dataset.k];
   });
+  updateTotal();
+}
+function updateTotal() {
+  const el = document.getElementById("wTotal");
+  if (!el) return;
+  const total = FACTOR_DEFS.reduce((s, f) => s + (W[f[0]] || 0), 0);
+  el.textContent = total;
+  const row = el.closest(".wtotal");
+  if (row) row.style.color = total === 100 ? "var(--good)" : "var(--amber)";
 }
 
 function activePool(f) {
