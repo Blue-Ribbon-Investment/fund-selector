@@ -1,0 +1,49 @@
+{
+  "risk_free_rate": 0.058416,
+  "_scoring_note": "New mechanism: rank each factor WITHIN the category (1=best on that factor), mirror it so higher=better, weight, sum -> composite. Highest composite = #1 = best fund. Weights below are the team default; each visitor can adjust their own in the site. 'dir' says whether a LOWER value is better (cost, risk) or HIGHER (sharpe, ir, cagr).",
+  "default_weights": {
+    "er": 10,
+    "sharpe": 10,
+    "ir": 20,
+    "vol": 50,
+    "cagr": 10,
+    "beta": 0,
+    "treynor": 0,
+    "alpha": 0,
+    "selnet": 0,
+    "tracking": 0
+  },
+  "factor_defs": {
+    "er":       { "label": "Expense ratio",  "dir": "low",  "better": "cheaper fund" },
+    "sharpe":   { "label": "Sharpe",        "dir": "high", "better": "more reward per unit of total risk" },
+    "ir":       { "label": "Info ratio",    "dir": "high", "better": "reward per unit of tracking error (Alpha / TE)" },
+    "vol":      { "label": "Volatility",     "dir": "low",  "better": "calmer fund" },
+    "cagr":     { "label": "5y CAGR",       "dir": "high", "better": "higher growth" },
+    "beta":     { "label": "Beta",          "dir": "low",  "better": "lower = less market-swayed", "default": 0 },
+    "treynor":  { "label": "Treynor",       "dir": "high", "better": "reward per unit of market risk", "default": 0 },
+    "alpha":    { "label": "Jensen's alpha","dir": "high", "better": "skill beyond what beta predicts", "default": 0 },
+    "selnet":   { "label": "Selectivity",   "dir": "high", "better": "return from good stock-picking", "default": 0 },
+    "tracking": { "label": "Tracking error","dir": "low",  "better": "closer to the index = steadier", "default": 0 }
+  },
+  "windows_years": [5, 3, 1],
+  "nav_source": "https://portal.amfiindia.com/spages/NAVAll.txt",
+  "history_source_tpl": "https://api.mfapi.in/mf/{code}",
+  "benchmark_source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENSEI?range=5y&interval=1d",
+  "_how_to_add_a_category": "Add a display-name -> list-of-AMFI-sections entry to include_categories, e.g. \"Value cap\": [\"Value Fund\"]. To remove one, delete its entry. To force a fund in even if its category is excluded, add its AMFI scheme code to include_codes.",
+  "include_categories": {
+    "Large & Mid cap": ["Large & Mid Cap Fund"],
+    "Large cap": ["Large Cap Fund"],
+    "Flexi/Multi cap": ["Flexi Cap Fund", "Multi Cap Fund"],
+    "Mid cap": ["Mid Cap Fund"],
+    "Small cap": ["Small Cap Fund"],
+    "ELSS (tax saver)": ["ELSS", "ELSS- Tax Saver Fund"],
+    "Balanced/Hybrid": ["Balanced Hybrid Fund", "Balanced Advantage", "Dynamic Asset Allocation", "Equity Oriented Balanced Fund", "Equity Savings Fund"]
+  },
+  "_categories_note": "Keys are the tab names shown on the site. Values are AMFI section fragments from NAVAll.txt. Add/remove a key (or one of its fragments) to add/remove a whole category; the tabs update themselves.",
+  "include_codes": [],
+  "preferred_plan": "Direct Plan",
+  "plan_fallback": "Regular Plan",
+  "_plan_rule": "Keep GROWTH option only. Prefer preferred_plan, fall back to plan_fallback when a fund has no preferred plan.",
+  "_aum_note": "No reachable source publishes per-fund AUM, so the AUM>=500cr screen is not auto-applied. The category filter above already removes most tiny funds. To hard-filter by a curated AUM list, drop an aum.csv (scheme_code,aum_crores) next to this file and set aum_filter_crores.",
+  "aum_filter_crores": 0
+}

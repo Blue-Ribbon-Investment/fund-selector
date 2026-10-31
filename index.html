@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fund Selector</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="banner" hidden></div>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <h1>Fund Selector</h1>
+    <div class="sub"><span class="dot"></span><span id="dataAge"></span></div>
+  </div>
+  <div class="controls">
+    <div class="seg" id="years">
+      <button data-y="1">1 year</button>
+      <button data-y="3">3 years</button>
+      <button data-y="5" class="on">5 years</button>
+    </div>
+    <span class="chip" id="rfChip">Risk-free 5.84%</span>
+  </div>
+</header>
+
+<div class="tabs" id="tabs"></div>
+<div class="row"><input id="search" placeholder="Search fund or house…"></div>
+
+<div class="grid">
+  <div>
+    <div id="detail" class="card" hidden><div class="in">
+      <button class="back" id="closeD">&larr; back to ranking</button>
+      <h2 id="dName"></h2>
+      <div id="dFacts" class="facts"></div>
+      <canvas id="chart" height="120"></canvas>
+      <div class="legend"><span><i style="background:#5b8cff"></i>Fund NAV</span><span><i style="background:#8b91a7"></i>Nifty 50</span><span style="margin-left:auto">both start at 100</span></div>
+      <div class="note" id="dNote"></div>
+    </div></div>
+
+    <div class="card" style="overflow-x:auto">
+      <table>
+        <thead><tr id="th"></tr></thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <aside>
+    <div class="card">
+      <h3>Your score</h3>
+      <div class="hint">Each factor is ranked <b>within the category</b> (1 = best on that factor), then weighted. Highest total = best fund = <b>#1</b>. Your weights are saved in this browser.</div>
+      <div id="wr"></div>
+      <div class="composite">Best on your weights<br><b id="topPick">&mdash;</b></div>
+      <div class="btns">
+        <button id="resetW">Reset</button>
+        <button id="randW">Random</button>
+        <button id="shareW">Share view</button>
+      </div>
+      <div class="btns"><button id="howBtn">How is a fund ranked?</button></div>
+    </div>
+  </aside>
+</div>
+
+<section class="method" id="how" hidden>
+  <h2>How a fund gets its #1</h2>
+  <ol>
+    <li><b>Pick a pool</b> — on a category tab, funds only compete against others in that category (small caps vs small caps). The "All" view ranks everything in one list.</li>
+    <li><b>Measure every parameter</b> over the chosen window: expense ratio, Sharpe, info ratio (Alpha &divide; tracking error), volatility, CAGR, beta, Treynor, Jensen's alpha, selectivity and tracking error.</li>
+    <li><b>Rank within the pool on each parameter.</b> Being best on a parameter earns the most points on it (for cost and volatility "best" means lowest — that's the team's rule).</li>
+    <li><b>Apply your weights</b> (the sliders) and add them up. Highest total is rank 1 — the best fund is always at the top.</li>
+    <li><b>Team default:</b> the five core parameters are switched on (cost 10, Sharpe 10, info ratio 20, volatility 50, CAGR 10); the others start at <b>0 (off)</b> so no one's ranking moves until they turn one on. Adjust sliders any time; "Share view" hands someone a link that opens with <i>your</i> weights.</li>
+  </ol>
+  <p class="muted">Funds under a year old show a <b>NEW</b> badge: not enough history to trust a ranking.</p>
+</section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

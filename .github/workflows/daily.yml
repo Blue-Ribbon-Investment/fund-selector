@@ -1,0 +1,58 @@
+name: daily-update
+on:
+  schedule:
+    # 00:00 UTC on weekdays ~ 05:30 IST, after AMFI/mfapi publish the day's NAVs
+    - cron: "0 0 * * 1-5"
+  workflow_dispatch: {}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild universe from config
+        run: python scripts/build_universe.py
+
+      - name: Refresh histories + benchmark
+        run: |
+          python scripts/fetch_benchmark.py
+          python scripts/fetch_history.py --refresh
+
+      - name: Expense ratios (best effort, never blocks)
+        run: python scripts/fetch_expense.py || echo "expense fetch failed - column will show n/a"
+
+      - name: Recompute stats + status
+        run: python scripts/recompute.py
+
+      - name: Record failure status if anything broke
+        if: ${{ failure() }}
+        run: |
+          python - <<'PY'
+          import json, datetime
+          json.dump({"ok": False,
+                     "lastFetch": json.load(open("data/agg.json"))["asOf"],
+                     "error": "daily update failed; showing previous numbers",
+                     "failedAt": datetime.datetime.now(datetime.timezone.utc).isoformat()},
+                   open("data/status.json", "w"), indent=1)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/status.json
+          git commit -m "record failed daily update" || true
+          git push
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git status --porcelain data/ | grep -q . || { echo "no data changes"; exit 0; }
+          git commit -m "daily data refresh"
+          git push
+        # GitHub Pages auto-redeploys from the default branch.
