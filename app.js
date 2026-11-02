@@ -227,7 +227,7 @@ function buildUI() {
       : "no match";
     list.innerHTML = m.slice(0, 8).map(f =>
       `<div data-c="${f.code}"><span>${f.name}<small class="mut">${f.amc} · ${f.cat}</small></span>` +
-      `<span class="mut">#${activePool(f).rank || "—"} · score ${((activePool(f).score ?? 0)).toFixed(0)}</span></div>`).join("");
+      `<span class="mut">in ${f.cat} #${f.inCatRank || "—"} · score ${((f.inCatScore ?? 0)).toFixed(0)}</span></div>`).join("");
     list.hidden = !m.length;
     list.querySelectorAll("div[data-c]").forEach(el =>
       el.onclick = () => openFundFromSearch(el.dataset.c));
@@ -377,27 +377,20 @@ function poolCount(cat) {
   return FUNDS.filter(x => x.age >= 1 && (cat === "All" || x.cat === cat)).length;
 }
 
-// Position of one fund inside the currently displayed pool, plus the other
-// pool for reference. This is "its rank in that specific fund list".
+// The fund's standing in its own category first (the team's primary list),
+// with the all-funds rank kept only as a reference.
 function rankStrip(f) {
-  const a = activePool(f);
-  const n = poolCount(state.cat);
-  let html = `<span class="rk head">#${a.rank || "—"} of ${n}` +
-    (state.cat === "All" ? " funds" : " " + f.cat + " funds") + "</span>";
-  if (a.score != null) html += `<span class="rk">score <b>${a.score.toFixed(1)}</b></span>`;
-  if (state.cat === "All") {
-    if (f.inCatRank) html += `<span class="rk">within ${f.cat} <b>#${f.inCatRank}</b></span>`;
-  } else if (f.allRank) {
-    html += `<span class="rk">across all funds <b>#${f.allRank}</b></span>`;
-  }
-  if (f.age < 1) html += `<span class="rk">too new to rank yet</span>`;
+  if (f.age < 1) return `<span class="rk head">too new to rank yet</span>`;
+  let html = `<span class="rk head">in ${f.cat}: #${f.inCatRank} of ${poolCount(f.cat)}</span>`;
+  if (f.inCatScore != null) html += `<span class="rk">category score <b>${f.inCatScore.toFixed(1)}</b></span>`;
+  if (f.allRank) html += `<span class="rk">across all funds: #${f.allRank} of ${poolCount("All")}</span>`;
   return html;
 }
 
-// How this fund lines up against its peers on each measured factor, in the
-// active pool. quality 0-100, 100 = best of the pool.
+// How this fund lines up against its own category's funds on each measured
+// factor. quality 0-100, 100 = best of the category.
 function poolQuality(f) {
-  const pool = FUNDS.filter(x => x.age >= 1 && (state.cat === "All" || x.cat === state.cat));
+  const pool = FUNDS.filter(x => x.age >= 1 && x.cat === f.cat);
   const i = pool.indexOf(f);
   if (i < 0) return null;
   const out = {};
@@ -405,10 +398,11 @@ function poolQuality(f) {
   return out;
 }
 
-// Auto-written strengths and watch-outs, always relative to the fund's peers.
+// Auto-written strengths and watch-outs, relative to funds in the SAME
+// category — a mid cap fund is judged against mid caps, not the universe.
 function goodBadPoints(f) {
   const q = poolQuality(f);
-  const poolName = state.cat === "All" ? "all funds" : "its category";
+  const poolName = f.cat + " funds";
   let good = [], bad = [];
   if (q) {
     const rows = FACTOR_DEFS.map(([k, label]) => ({ label, v: q[k] }))
