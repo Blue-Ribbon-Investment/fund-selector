@@ -223,12 +223,16 @@ function buildUI() {
       $("#matchInfo").textContent = "";
       return;
     }
-    const m = FUNDS.filter(f =>
-      (f.name + " " + f.amc).toLowerCase().includes(q));
+    const m = FUNDS
+      .map(f => ({ f, r: matchFund(f, q) }))
+      .filter(x => x.r.hit)
+      .sort((a, b) => a.r.span - b.r.span ||
+        ((a.f.inCatRank || 999) - (b.f.inCatRank || 999)))
+      .map(x => x.f);
     $("#matchInfo").textContent = m.length
       ? m.length + (m.length === 1 ? " match" : " matches")
-      : "no match";
-    list.innerHTML = m.slice(0, 8).map(f =>
+      : "no match — try fewer or looser words";
+    list.innerHTML = m.slice(0, 10).map(f =>
       `<div data-c="${f.code}"><span>${f.name}<small class="mut">${f.amc} · ${f.cat}</small></span>` +
       `<span class="mut">in ${f.cat} #${f.inCatRank || "—"} · score ${((f.inCatScore ?? 0)).toFixed(0)}</span></div>`).join("");
     list.hidden = !m.length;
@@ -271,10 +275,28 @@ function activePool(f) {
                             : { rank: f.inCatRank, score: f.inCatScore };
 }
 
+/* Fuzzy fund match: every word you type must appear somewhere in the fund's
+   name, house or category — in ANY order. "ICICI large cap" finds "ICICI
+   Prudential Large and Midcap Fund" (cap inside midcap, words rearranged).
+   span = how tightly the words sit together; smaller = more relevant. */
+function matchFund(f, q) {
+  const words = q.trim().split(/\s+/).filter(w => w.length >= 2);
+  if (!words.length) return { hit: true, span: 0 };
+  const hay = (f.name + " " + f.amc + " " + f.cat).toLowerCase();
+  let min = Infinity, max = -Infinity;
+  for (const w of words) {
+    const i = hay.indexOf(w);
+    if (i < 0) return { hit: false, span: Infinity };
+    if (i < min) min = i;
+    if (i + w.length > max) max = i + w.length;
+  }
+  return { hit: true, span: max - min };
+}
+
 function rows() {
   let list = FUNDS.filter(f =>
     (state.cat === "All" || f.cat === state.cat) &&
-    (!state.q || (f.name + " " + f.amc).toLowerCase().includes(state.q)));
+    (!state.q || matchFund(f, state.q).hit));
   const K = state.sort.key, dir = state.sort.dir;
   const get = f => {
     const a = activePool(f);
