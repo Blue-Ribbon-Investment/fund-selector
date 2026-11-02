@@ -25,14 +25,22 @@
 </header>
 
 <div class="tabs" id="tabs"></div>
-<div class="row"><input id="search" placeholder="Search fund or house…"></div>
+<div class="row"><div class="searchwrap">
+  <input id="search" placeholder="Search a fund or house — type a name, pick a match, get its dossier">
+  <div id="searchList" hidden></div>
+</div><span id="matchInfo" class="chip"></span></div>
 
 <div class="grid">
   <div>
     <div id="detail" class="card" hidden><div class="in">
       <button class="back" id="closeD">&larr; back to ranking</button>
       <h2 id="dName"></h2>
+      <div id="dRank" class="drank"></div>
       <div id="dFacts" class="facts"></div>
+      <div class="gbwrap">
+        <div class="gb" id="dGood"></div>
+        <div class="gb" id="dBad"></div>
+      </div>
       <canvas id="chart" height="120"></canvas>
       <div class="legend"><span><i style="background:#5b8cff"></i>Fund NAV</span><span><i style="background:#8b91a7"></i>Nifty 50</span><span style="margin-left:auto">both start at 100</span></div>
       <div class="note" id="dNote"></div>

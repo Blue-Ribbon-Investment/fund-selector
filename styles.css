@@ -13,6 +13,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;pa
 .seg button{background:none;border:none;color:var(--mut);padding:7px 14px;cursor:pointer;font-size:13px}
 .seg button.on{background:var(--acc);color:#fff}
 .chip{font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:6px 12px;background:var(--card)}
+.chip:empty{display:none}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;padding:14px 0 10px}
 .tab{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:99px;padding:5px 14px;cursor:pointer;font-size:12.5px}
 .tab.on{background:var(--acc);border-color:var(--acc);color:#fff}
@@ -54,6 +55,27 @@ aside .hint b{color:var(--txt)}
 .fact{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:8px 12px;min-width:86px}
 .fact b{display:block;font-size:15px}
 .fact span{font-size:11px;color:var(--mut)}
+.searchwrap{position:relative}
+#searchList{position:absolute;top:calc(100% + 4px);left:0;min-width:340px;max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+#searchList div{padding:7px 12px;cursor:pointer;font-size:12.5px;border-bottom:1px solid #1f2436}
+#searchList div:last-child{border-bottom:none}
+#searchList div:hover{background:#1a1f30}
+#searchList .mut{color:var(--mut)}
+#searchList small{display:block;color:var(--mut);font-size:11px}
+.drank{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 4px}
+.rk{font-size:12px;background:var(--card2);border:1px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--mut)}
+.rk b{color:var(--acc);font-size:13px}
+.rk.head b{color:#fff;background:var(--acc);border-radius:4px;padding:1px 7px;margin-right:4px}
+.gbwrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 12px}
+.gb{border-radius:9px;padding:10px 12px}
+#dGood{background:#122a1e;border:1px solid #1d4430}
+#dBad{background:#2a1518;border:1px solid #4a2026}
+.gb h4{margin:0 0 6px;font-size:12px;letter-spacing:.4px}
+#dGood h4{color:var(--good)}
+#dBad h4{color:var(--bad)}
+.gb ul{margin:0;padding-left:18px;font-size:12.5px}
+.gb li{margin:4px 0;line-height:1.45}
+.gb .mut{font-style:italic}
 canvas{width:100%;height:120px}
 .legend{display:flex;gap:14px;font-size:11px;color:var(--mut);margin-top:6px}
 .legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
@@ -61,7 +83,7 @@ canvas{width:100%;height:120px}
 .note{font-size:11.5px;color:var(--mut);margin-top:10px}
 .method{margin:18px 0 60px;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 20px}
 .method li{margin:6px 0}
-@media(max-width:980px){.grid{grid-template-columns:1fr}aside .card{position:static}}
+@media(max-width:980px){.grid{grid-template-columns:1fr}aside .card{position:static}.gbwrap{grid-template-columns:1fr}}
 
 .wtotal{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--mut)}
 .wtotal b{color:var(--txt);font-variant-numeric:tabular-nums}

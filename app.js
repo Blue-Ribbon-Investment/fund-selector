@@ -193,14 +193,53 @@ function buildUI() {
     render();
   };
 
-  $("#search").oninput = e => { state.q = e.target.value.toLowerCase(); render(); };
   $("#years").onclick = e => {
     if (!e.target.dataset.y) return;
     state.years = +e.target.dataset.y;
     document.querySelectorAll("#years button").forEach(b => b.classList.toggle("on", b === e.target));
     buildFunds(); refreshAll();
   };
+
   $("#closeD").onclick = () => { $("#detail").hidden = true; };
+
+  // --- search box: filters the table AND offers a quick-jump list -------------------
+  // Type a fund name; the table below narrows to the matches, and a dropdown shows
+  // the top matches with their live rank — click one to open that fund's dossier.
+  const search = $("#search");
+  const list = $("#searchList");
+  let matchEl = null;
+  const openFundFromSearch = c => {
+    list.hidden = true; matchEl = null;
+    state.q = ""; search.value = ""; $("#matchInfo").textContent = "";
+    openDetail(c);
+  };
+  const updateMatches = () => {
+    const q = state.q;
+    if (!q) {
+      list.hidden = true; matchEl = null;
+      $("#matchInfo").textContent = "";
+      return;
+    }
+    const m = FUNDS.filter(f =>
+      (f.name + " " + f.amc).toLowerCase().includes(q));
+    $("#matchInfo").textContent = m.length
+      ? m.length + (m.length === 1 ? " match" : " matches")
+      : "no match";
+    list.innerHTML = m.slice(0, 8).map(f =>
+      `<div data-c="${f.code}"><span>${f.name}<small class="mut">${f.amc} · ${f.cat}</small></span>` +
+      `<span class="mut">#${activePool(f).rank || "—"} · score ${((activePool(f).score ?? 0)).toFixed(0)}</span></div>`).join("");
+    list.hidden = !m.length;
+    list.querySelectorAll("div[data-c]").forEach(el =>
+      el.onclick = () => openFundFromSearch(el.dataset.c));
+    matchEl = list.hidden ? null : list.children[0];
+  };
+  search.oninput = e => { state.q = e.target.value.toLowerCase(); render(); updateMatches(); };
+  search.onfocus = updateMatches;
+  search.onblur = () => setTimeout(() => { list.hidden = true; matchEl = null; }, 120);
+  search.onkeydown = e => {
+    if (e.key !== "Enter") return;
+    if (matchEl) { e.preventDefault(); matchEl.click(); }   // open the top match
+  };
 
   const asOf = AGG.asOf || META.asOf;
   $("#dataAge").textContent = "Data as of " + asOf + " · " + META.funds.length + " funds · refreshes every night";
@@ -308,7 +347,11 @@ async function openDetail(code) {
   $("#detail").hidden = false;
   $("#detail").scrollIntoView({ behavior: "smooth", block: "start" });
   const s = f.s, a = activePool(f);
-  $("#dName").textContent = f.name + (a.rank ? `  ·  #${a.rank} in ${state.cat === "All" ? "all funds" : f.cat}` : "");
+  $("#dName").textContent = f.name;
+  $("#dRank").innerHTML = rankStrip(f);
+  const pts = goodBadPoints(f);
+  $("#dGood").innerHTML = `<h4>What's working in its favour</h4><ul>${pts.good.map(x => `<li>${x}</li>`).join("")}</ul>`;
+  $("#dBad").innerHTML = `<h4>Watch-outs</h4><ul>${pts.bad.map(x => `<li>${x}</li>`).join("")}</ul>`;
   const sgn = v => v == null ? "—" : (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "%";
   $("#dFacts").innerHTML = [
     [f.cat || "—", "Category"],
@@ -327,6 +370,58 @@ async function openDetail(code) {
   $("#dNote").textContent = "Score = weighted rank of this fund within its pool: every parameter shown here has a slider on the right (your five defaults are on, the rest start off). Best total is #1.";
   const rec = await fetch("data/nav/" + f.code + ".json").then(r => r.json()).catch(() => null);
   if (rec && rec.nav && rec.nav.length) drawChart(f, rec.nav, s);
+}
+
+/* ---------------- the fund's dossier: rank strip + good/bad ---------------- */
+function poolCount(cat) {
+  return FUNDS.filter(x => x.age >= 1 && (cat === "All" || x.cat === cat)).length;
+}
+
+// Position of one fund inside the currently displayed pool, plus the other
+// pool for reference. This is "its rank in that specific fund list".
+function rankStrip(f) {
+  const a = activePool(f);
+  const n = poolCount(state.cat);
+  let html = `<span class="rk head">#${a.rank || "—"} of ${n}` +
+    (state.cat === "All" ? " funds" : " " + f.cat + " funds") + "</span>";
+  if (a.score != null) html += `<span class="rk">score <b>${a.score.toFixed(1)}</b></span>`;
+  if (state.cat === "All") {
+    if (f.inCatRank) html += `<span class="rk">within ${f.cat} <b>#${f.inCatRank}</b></span>`;
+  } else if (f.allRank) {
+    html += `<span class="rk">across all funds <b>#${f.allRank}</b></span>`;
+  }
+  if (f.age < 1) html += `<span class="rk">too new to rank yet</span>`;
+  return html;
+}
+
+// How this fund lines up against its peers on each measured factor, in the
+// active pool. quality 0-100, 100 = best of the pool.
+function poolQuality(f) {
+  const pool = FUNDS.filter(x => x.age >= 1 && (state.cat === "All" || x.cat === state.cat));
+  const i = pool.indexOf(f);
+  if (i < 0) return null;
+  const out = {};
+  for (const [k] of FACTOR_DEFS) out[k] = rankQuality(pool, k)[i];
+  return out;
+}
+
+// Auto-written strengths and watch-outs, always relative to the fund's peers.
+function goodBadPoints(f) {
+  const q = poolQuality(f);
+  const poolName = state.cat === "All" ? "all funds" : "its category";
+  let good = [], bad = [];
+  if (q) {
+    const rows = FACTOR_DEFS.map(([k, label]) => ({ label, v: q[k] }))
+                            .filter(x => x.v != null);
+    good = rows.filter(x => x.v >= 75).sort((a, b) => b.v - a.v).slice(0, 4)
+               .map(x => `Beats about ${Math.round(x.v)}% of ${poolName} on <b>${x.label}</b>.`);
+    bad  = rows.filter(x => x.v <= 30).sort((a, b) => a.v - b.v).slice(0, 4)
+               .map(x => `Weaker than about ${Math.round(100 - x.v)}% of ${poolName} on <b>${x.label}</b>.`);
+  }
+  if (f.age < 3) bad.push(`Only ${f.age.toFixed(1)} years of data — the track record is still thin.`);
+  if (!good.length) good.push("No standout strength over its peers on these measures — a balanced, mid-pack fund.");
+  if (!bad.length) bad.push("No clear weakness stands out over its peers on these measures.");
+  return { good, bad };
 }
 
 function drawChart(f, nav, s) {
