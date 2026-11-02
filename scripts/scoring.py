@@ -14,29 +14,33 @@ extras default to 0 (off) so they don't change the ranking until a visitor
 turns one on. direction tells the engine whether a LOWER value is better
 (low) or a HIGHER value is better (high):
 
-  er        expense ratio      low   default 10
-  sharpe    Sharpe ratio       high  default 10
+  er        expense ratio      low   default 0
+  sharpe    Sharpe ratio       high  default 20
   ir        information ratio  high  default 20
-  vol       volatility         low   default 50  (calmest wins, team choice)
-  cagr      annualised return  high  default 10
+  vol       volatility         low   default 20
+  cagr      annualised return  high  default 20
   beta      market sensitivity low   default 0   (0.9 calmer than 1.2)
   treynor   Treynor ratio      high  default 0
   alpha     Jensen's alpha     high  default 0
-  selnet    net selectivity    high  default 0
+  selnet    net selectivity    high  default 20
   tracking  tracking error     low   default 0   (closer to index = calmer)
+
+Team default (2026-11-06): ranking runs on exactly five parameters, each
+weighted 20 — Sharpe, info ratio, volatility, 5y CAGR, net selectivity.
+Anything else off.
 """
 
 # key, direction ("low"/"high"), default weight
 FACTORS = [
-    ("er",       "low",  10),
-    ("sharpe",   "high", 10),
+    ("er",       "low",   0),
+    ("sharpe",   "high", 20),
     ("ir",       "high", 20),
-    ("vol",      "low",  50),
-    ("cagr",     "high", 10),
+    ("vol",      "low",  20),
+    ("cagr",     "high", 20),
     ("beta",     "low",   0),
     ("treynor",  "high",  0),
     ("alpha",    "high",  0),
-    ("selnet",   "high",  0),
+    ("selnet",   "high", 20),
     ("tracking", "low",   0),
 ]
 

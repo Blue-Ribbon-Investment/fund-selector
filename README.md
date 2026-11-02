@@ -7,8 +7,9 @@ CAGR, beta, Treynor, Jensen's alpha, selectivity, tracking error.
 
 ## How the ranking works
 Every parameter is ranked within the pool (category, or all funds), best = 100
-points. The team-default weights (cost 10, Sharpe 10, info ratio 20, volatility 50,
-CAGR 10; the rest off) turn those into a composite score. Highest score = rank #1.
+points. The team-default weights (Sharpe 20, info ratio 20, volatility 20, 5-year
+CAGR 20, net selectivity 20; everything else off) turn those into a composite
+score. Highest score = rank #1.
 Each visitor can move the weight sliders for their own view (saved in their browser,
 shareable via link). Funds under 1 year old are shown but not ranked.
 

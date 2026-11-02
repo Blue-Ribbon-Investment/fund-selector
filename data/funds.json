@@ -3,15 +3,15 @@
  "count": 392,
  "rf": 0.058416,
  "default_weights": {
-  "er": 10,
-  "sharpe": 10,
+  "er": 0,
+  "sharpe": 20,
   "ir": 20,
-  "vol": 50,
-  "cagr": 10,
+  "vol": 20,
+  "cagr": 20,
   "beta": 0,
   "treynor": 0,
   "alpha": 0,
-  "selnet": 0,
+  "selnet": 20,
   "tracking": 0
  },
  "factor_defs": {

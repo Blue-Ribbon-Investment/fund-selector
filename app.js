@@ -26,8 +26,8 @@ const FALLBACK_DEFS = [
   ["selnet", "Selectivity", "higher", "return from good stock-picking"],
   ["tracking", "Tracking error", "lower", "closer to the index = steadier"],
 ];
-const FALLBACK_W = { er: 10, sharpe: 10, ir: 20, vol: 50, cagr: 10,
-                     beta: 0, treynor: 0, alpha: 0, selnet: 0, tracking: 0 };
+const FALLBACK_W = { er: 0, sharpe: 20, ir: 20, vol: 20, cagr: 20,
+                     beta: 0, treynor: 0, alpha: 0, selnet: 20, tracking: 0 };
 let FACTOR_DEFS = FALLBACK_DEFS.slice();
 let DIR = { er: "low", vol: "low", beta: "low", tracking: "low",
             sharpe: "high", ir: "high", cagr: "high",
@@ -98,11 +98,14 @@ function buildFunds() {
 
 async function init() {
   try {
+    // The date in the URL key means browsers always see the newest data once
+    // the nightly pipeline has republished it (same day reuses the cache).
+    const cb = "d=" + new Date().toISOString().slice(0, 10);
     const [ag, fu, ni, st] = await Promise.all([
-      fetch("data/agg.json").then(r => r.json()),
-      fetch("data/funds.json").then(r => r.json()),
-      fetch("data/nifty.json").then(r => r.json()),
-      fetch("data/status.json").then(r => r.json()).catch(() => ({ ok: true })),
+      fetch("data/agg.json?" + cb).then(r => r.json()),
+      fetch("data/funds.json?" + cb).then(r => r.json()),
+      fetch("data/nifty.json?" + cb).then(r => r.json()),
+      fetch("data/status.json?" + cb).then(r => r.json()).catch(() => ({ ok: true })),
     ]);
     AGG = ag; META = fu; NIFTY = ni.index;
     // let the config drive the full parameter set (labels + directions)
@@ -120,8 +123,8 @@ async function init() {
       DIR = { er: "low", vol: "low", beta: "low", tracking: "low",
              sharpe: "high", ir: "high", cagr: "high",
              treynor: "high", alpha: "high", selnet: "high" };
-      DEF_W = { er: 10, sharpe: 10, ir: 20, vol: 50, cagr: 10,
-                beta: 0, treynor: 0, alpha: 0, selnet: 0, tracking: 0 };
+      DEF_W = { er: 0, sharpe: 20, ir: 20, vol: 20, cagr: 20,
+                beta: 0, treynor: 0, alpha: 0, selnet: 20, tracking: 0 };
     }
     W = Object.assign({}, DEF_W);
     buildFunds();
@@ -444,12 +447,20 @@ function drawChart(f, nav, s) {
 
 /* ---------------- per-visitor weights ---------------- */
 function saveWeights() { try { localStorage.setItem("fs.weights", JSON.stringify(W)); } catch (e) {} }
+// The exact weight set from before the team retuned the default on
+// 2026-11-06. Browsers still carrying it as a saved view silently upgrade
+// to the new default so everyone on the team lands on the same ranking.
+const LEGACY_DEFAULT = JSON.stringify({ er: 10, sharpe: 10, ir: 20, vol: 50, cagr: 10,
+                                        beta: 0, treynor: 0, alpha: 0, selnet: 0, tracking: 0 });
+
 function restoreWeights() {
   const q = new URLSearchParams(location.search).get("w");
   let src = q ? atob(q) : localStorage.getItem("fs.weights");
   if (!src) return;
   try {
     const w = JSON.parse(src);
+    if (!q && src === LEGACY_DEFAULT) src = null;   // saved view was just the old default
+    if (!src) { refreshSliders(); return; }          // use DEF_W, which the new data already carries
     FACTOR_DEFS.forEach(([k]) => { if (k in w) W[k] = +w[k]; });
     refreshSliders();
   } catch (e) {}

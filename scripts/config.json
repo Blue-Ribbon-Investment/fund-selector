@@ -2,15 +2,15 @@
   "risk_free_rate": 0.058416,
   "_scoring_note": "New mechanism: rank each factor WITHIN the category (1=best on that factor), mirror it so higher=better, weight, sum -> composite. Highest composite = #1 = best fund. Weights below are the team default; each visitor can adjust their own in the site. 'dir' says whether a LOWER value is better (cost, risk) or HIGHER (sharpe, ir, cagr).",
   "default_weights": {
-    "er": 10,
-    "sharpe": 10,
+    "er": 0,
+    "sharpe": 20,
     "ir": 20,
-    "vol": 50,
-    "cagr": 10,
+    "vol": 20,
+    "cagr": 20,
     "beta": 0,
     "treynor": 0,
     "alpha": 0,
-    "selnet": 0,
+    "selnet": 20,
     "tracking": 0
   },
   "factor_defs": {
