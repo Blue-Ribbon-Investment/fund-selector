@@ -39,7 +39,7 @@ function startQuiz() {
   // question are also rotated, so "always click the top one" stops working
   // and no question looks like a "safe" one to game.
   QUESTIONS = shuffle(CFG.questions).map(q =>
-    ({ ...q, options: rotate(q.options, Math.floor(Math.random() * 4)) }));
+    ({ ...q, options: rotate(q.options, Math.floor(Math.random() * q.options.length)) }));
   ANSWERS = {};
   qIndex = 0;
   show("quiz");
@@ -59,7 +59,7 @@ function showQuestion(i) {
   $("#qProgress .bar").style.width = ((i + 1) / QUESTIONS.length * 100) + "%";
   qBox.innerHTML = `<h2 class="qtext">${q.text}</h2>
     <div class="opts">${q.options.map(([label, points], k) =>
-      `<button class="opt" data-k="${k}"><span class="letter">${"ABCD"[k]}</span>${label}</button>`).join("")}</div>`;
+      `<button class="opt" data-k="${k}"><span class="letter">${"ABCDE"[k]}</span>${label}</button>`).join("")}</div>`;
   qBox.querySelectorAll(".opt").forEach(b => b.onclick = () => pick(q, +b.dataset.k));
   qStart = performance.now();
 }
@@ -102,10 +102,15 @@ function checks() {
 }
 
 function riskScore() {
+  // 1-5 ruler: 1 very cautious … 5 very bold (reversed items already carry
+  // the flipped values in the config). Neutral = 3 sits at 50.
+  const lo = CFG.scale_min, hi = CFG.scale_max;
   const scored = Object.values(ANSWERS).filter(a => a.w > 0);
   let num = 0, den = 0;
-  scored.forEach(a => { num += a.points * a.w; den += 3 * a.w; });
-  return den ? Math.round(num / den * 1000) / 10 : 0;
+  scored.forEach(a => { num += a.points * a.w; den += a.w; });
+  if (!den) return 0;
+  const avg = num / den;
+  return Math.round((avg - lo) / (hi - lo) * 1000) / 10;
 }
 
 function bandOf(score) {
