@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fund Selector — What's your investor type?</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="assessment.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>Which investor are you?</h1>
+      <div class="sub">20 quick questions, about 4 minutes. Your answers pick the style of ranking that fits you.</div>
+    </div>
+  </header>
+
+  <!-- ============ QUIZ ============ -->
+  <div id="quizStage" class="card qcard">
+    <div id="qProgress"><span class="bar"></span><span class="lbl"></span></div>
+    <div id="qBox"></div>
+    <div id="qHint" class="note">Answer the way that actually feels like you — there's no right answer here.</div>
+  </div>
+
+  <!-- ============ CONSENT + DETAILS ============ -->
+  <div id="detailsStage" class="card qcard" hidden>
+    <h2>You're all done — let's record it</h2>
+    <p class="note">Your team keeps a private log: name, number, your result and the time. This is stored on the team's records only, never shown publicly or sold.</p>
+    <div class="field"><label>Name</label><input id="inName" autocomplete="name" placeholder="Your name"></div>
+    <div class="field"><label>Mobile number</label><input id="inMobile" inputmode="tel" autocomplete="tel" placeholder="10-digit number"></div>
+    <label class="consent"><input type="checkbox" id="inConsent">
+      <span>I'm okay with my name and number being stored with the team's records for this result.</span></label>
+    <button class="btn" id="submitRec">Save &amp; see my result</button>
+    <button class="btn ghost" id="skipRec">Just see my result</button>
+  </div>
+
+  <!-- ============ RESULT ============ -->
+  <div id="resultStage" class="card qcard" hidden>
+    <div class="band" id="bandName"></div>
+    <div class="note" id="bandLine"></div>
+    <h3>Top 5 for your style</h3>
+    <div id="top5"></div>
+    <button class="btn ghost" id="fullBtn">View the full ranked list</button>
+    <div id="fullList" hidden></div>
+    <div id="codeBox" hidden>
+      <h3>Your result code</h3>
+      <div class="code" id="codeVal"></div>
+      <button class="btn ghost" id="copyBtn">Copy code &amp; link</button>
+      <p class="note" id="codeNote"></p>
+    </div>
+  </div>
+
+  <!-- ============ NEEDS REVIEW ============ -->
+  <div id="reviewStage" class="card qcard" hidden>
+    <h2>A quick personal check</h2>
+    <p class="note" id="reviewNote">Some of your answers don't quite add up with each other.</p>
+    <button class="btn" id="tryAgain">Look at them again</button>
+  </div>
+
+  <p class="note foot">Fund Selector · results are an internal research tool, not a recommendation to buy or sell. <a href="../">Back to the ranking</a></p>
+</div>
+<script src="quiz.js"></script>
+</body>
+</html>
