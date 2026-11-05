@@ -16,7 +16,7 @@
       "options": [ ["Strongly disagree", 1], ["Disagree", 2], ["No opinion", 3], ["Agree", 4], ["Strongly agree", 5] ] },
     { "id": "f3",  "w": 2, "type": "f", "text": "I enjoy a bet when I think I have an edge.",
       "options": [ ["Strongly disagree", 1], ["Disagree", 2], ["No opinion", 3], ["Agree", 4], ["Strongly agree", 5] ] },
-    { "id": "f4",  "w": 2, "type": "f", "text": "After I lose, I try the same kind of thing again.",
+    { "id": "f4",  "w": 2, "type": "f", "text": "If something doesn't work out, I try it again right away.",
       "options": [ ["Strongly disagree", 1], ["Disagree", 2], ["No opinion", 3], ["Agree", 4], ["Strongly agree", 5] ] },
     { "id": "f5",  "w": 1, "type": "f", "text": "I start new projects even when the result is uncertain.",
       "options": [ ["Strongly disagree", 1], ["Disagree", 2], ["No opinion", 3], ["Agree", 4], ["Strongly agree", 5] ] },
