@@ -118,6 +118,37 @@ function bandOf(score) {
          CFG.bands[CFG.bands.length - 1];
 }
 
+/* The parameter weights come from a formula, not a hand-picked table:
+   weight = base + slope x G,  G = risk score / 100 (0 very cautious,
+   1 very growth-oriented). Calmness falls exactly as growth rises
+   (vol -50 vs cagr +30, sharpe steady), so a cautious client's list is
+   built on calm, a growth client's on returns, and everyone between is
+   on the straight line between. Weights are floored at 0, rounded to the
+   slider step, and the remainder lands on the two load-bearing params
+   (sharpe, then ir) so they always total 100. */
+function formulaWeights(score) {
+  const G = score / 100;
+  const P = CFG.weight_formula ? CFG.weight_formula.params : null;
+  if (!P) return bandOf(score).weights;   // fall back to the band table
+  const step = CFG.weight_formula.round_to || 5;
+  const w = {};
+  let total = 0;
+  for (const k of Object.keys(P)) {
+    const raw = P[k].base + P[k].slope * G;
+    w[k] = Math.max(0, Math.round(raw / step) * step);
+    total += w[k];
+  }
+  let drift = 100 - total;
+  for (const key of ["sharpe", "ir"]) {          // absorb rounding on the stable params
+    if (drift === 0) break;
+    const take = Math.min(drift, w[key] + step); // never push a param past a sensible max
+    w[key] = Math.max(0, w[key] + take);
+    drift -= take;
+  }
+  if (drift !== 0) w.sharpe += drift;            // last-resort sink
+  return w;
+}
+
 function finishQuiz() {
   const flags = checks();
   flagCount = Object.values(flags).filter(Boolean).length;
@@ -131,7 +162,8 @@ function finishQuiz() {
     $("#tryAgain").onclick = () => { attempt = 2; startQuiz(); };
     return;
   }
-  result = { score: riskScore(), band: bandOf(riskScore()),
+  const sc = riskScore();
+  result = { score: sc, band: bandOf(sc), weights: formulaWeights(sc),
              confidence: flagCount === 0 ? "clean"
                        : flagCount === 1 ? "low" : "needs-review" };
   if (result.confidence === "needs-review") {
@@ -147,20 +179,20 @@ function finishQuiz() {
 
 /* ---------------- record + result ---------------- */
 function shareCode() {
-  // The client-facing code encodes only the team's weight profile for this
-  // band. It is the exact string the main site's "?w=" reader expects (its
-  // factor keys at the top level), so opening main/?w=<code> reproduces the
-  // client's personalised ranking — while the numbers themselves are never
-  // shown to the client. Provenance (band, score, time, name, number) is
-  // captured separately in the team record.
-  return btoa(JSON.stringify(result.band.weights));
+  // The client-facing code encodes the client's personal weight profile,
+  // computed by the formula from their risk score. It is the exact string
+  // the main site's "?w=" reader expects, so opening main/?w=<code>
+  // reproduces that client's personalised ranking — while the numbers are
+  // never shown to the client. Provenance (band, score, time, name, number,
+  // weights) is captured in the team record.
+  return btoa(JSON.stringify(result.weights));
 }
 
 async function autoRecord(code, name, phone) {
   if (!CFG.record_endpoint) return false;
   const body = JSON.stringify({ ts: new Date().toISOString(), name, phone,
                                 code, band: result.band.name, score: result.score,
-                                confidence: result.confidence });
+                                weights: result.weights, confidence: result.confidence });
   for (let i = 0; i < CFG.auto_record_attempts; i++) {
     try {
       // Google Apps Script web app: POST the JSON as text/plain, no-cors.
@@ -222,7 +254,7 @@ function rankForClient(funds, weights) {
    short, kid-English "why we picked it" for each. No scores, no weights, no
    risk numbers anywhere on this screen — those stay on the team's side. */
 function showResult(code, recorded) {
-  const list = rankForClient(buildClientFunds(), result.band.weights);
+  const list = rankForClient(buildClientFunds(), result.weights);
   $("#bandName").textContent = "You're " + (result.band.client_label || result.band.name) + ".";
   $("#bandLine").textContent = result.band.client_style || "";
   $("#top5").innerHTML = pickCards(list.slice(0, 5));

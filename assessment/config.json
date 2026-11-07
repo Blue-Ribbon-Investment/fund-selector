@@ -51,7 +51,23 @@
     { "id": "d4",  "w": 0, "type": "d", "text": "In my free time I read more than I watch.",
       "options": [ ["Strongly disagree", 1], ["Disagree", 2], ["No opinion", 3], ["Agree", 4], ["Strongly agree", 5] ] }
   ],
-  "bands_pending_team_review": true,
+  "_formula_note": "Ranking weights are NOT a hand-picked table anymore: every parameter is a straight line weight = base + slope x G, where G = risk score / 100 (0 very cautious, 1 very growth-oriented). Calmness falls exactly as growth rises; the lines are normalized to sum to 100, rounded to 5s. Bands below only provide the client-facing label + style line.",
+  "weight_formula": {
+    "round_to": 5,
+    "_shape": "base = the weight for a fully-cautious client (score 0), slope = how it moves by score 100. Calm/safe params (vol, sharpe, tracking, cost) start high and fall; growth/skill params (CAGR, info ratio, selectivity) start near zero and rise. Picked so both ends sum to 100.",
+    "params": {
+      "vol":      { "base": 40, "slope": -40 },
+      "sharpe":   { "base": 30, "slope": -20 },
+      "cagr":     { "base": 5,  "slope": 40 },
+      "ir":       { "base": 0,  "slope": 25 },
+      "selnet":   { "base": 0,  "slope": 20 },
+      "tracking": { "base": 15, "slope": -15 },
+      "er":       { "base": 10, "slope": -10 },
+      "alpha":    { "base": 0,  "slope": 0 },
+      "beta":     { "base": 0,  "slope": 0 },
+      "treynor":  { "base": 0,  "slope": 0 }
+    }
+  },
   "bands": [
     { "id": "conservative",    "name": "Conservative",    "min": 0,  "max": 29,
       "client_style": "Your answers say you would rather see your money grow slowly but surely, than watch it bounce around. So we picked funds that stay calm even when the market is wild.",
