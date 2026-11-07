@@ -56,7 +56,10 @@ function showQuestion(i) {
   qIndex = i;
   const q = QUESTIONS[i];
   $("#qProgress .lbl").textContent = "Question " + (i + 1) + " of " + QUESTIONS.length;
-  $("#qProgress .bar").style.width = ((i + 1) / QUESTIONS.length * 100) + "%";
+  // The colored fill is the .bar::before pseudo-element; it reads its width
+  // from the --p custom property set here, so the bar visibly grows question
+  // by question.
+  $("#qProgress .bar").style.setProperty("--p", ((i + 1) / QUESTIONS.length * 100) + "%");
   qBox.innerHTML = `<h2 class="qtext">${q.text}</h2>
     <div class="opts">${q.options.map(([label, points], k) =>
       `<button class="opt" data-k="${k}"><span class="letter">${"ABCDE"[k]}</span>${label}</button>`).join("")}</div>`;

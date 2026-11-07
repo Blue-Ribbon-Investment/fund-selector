@@ -14,7 +14,7 @@
 .qcard h3{font-size:15px;margin:14px 0 8px}
 #qProgress{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 #qProgress .bar{flex:1;height:5px;background:var(--line);border-radius:3px;overflow:hidden;position:relative}
-#qProgress .bar::before{content:"";position:absolute;inset:0;width:0;background:var(--acc);transition:width .25s}
+#qProgress .bar::before{content:"";position:absolute;inset:0;width:var(--p,0%);background:var(--acc);transition:width .25s}
 #qProgress .lbl{font-size:11.5px;color:var(--mut);white-space:nowrap}
 .qtext{font-size:17px;line-height:1.4;margin:6px 0 16px}
 .opts{display:grid;gap:8px}
