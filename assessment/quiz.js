@@ -1,6 +1,7 @@
 /* Client risk-assessment (part 2 of Fund Selector).
-   20 questions, re-rolled in a fresh order every visit, option order rotated
-   per question. 12 forward, 4 reversed (scored against the flow), 4
+   20 questions, re-rolled in a fresh order every visit; the five answer
+   options are always shown in the same fixed order (Strongly disagree
+   first, Strongly agree last). 12 forward, 4 reversed (scored against the flow), 4
    distractors (weight 0). Three independent random-detection checks:
    reverse-consistency, same-button bias, and answer speed.
    Flow: quiz -> (one quiet retake if 2+ checks trip) -> consent + details
@@ -21,8 +22,6 @@ const shuffle = a => { a = a.slice();
   for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]]; }
   return a; };
-const rotate = (a, n) => { n %= a.length; return a.slice(n).concat(a.slice(0, n)); };
-
 async function init() {
   const [c, ag, fu] = await Promise.all([
     fetch("config.json?" + cb()).then(r => r.json()),
@@ -35,11 +34,12 @@ async function init() {
 
 /* ---------------- quiz flow ---------------- */
 function startQuiz() {
-  // A fresh random order on every visit; the four options inside each
-  // question are also rotated, so "always click the top one" stops working
-  // and no question looks like a "safe" one to game.
-  QUESTIONS = shuffle(CFG.questions).map(q =>
-    ({ ...q, options: rotate(q.options, Math.floor(Math.random() * q.options.length)) }));
+  // A fresh random order on every visit (questions are re-rolled), but the
+  // five options inside each question are ALWAYS shown in the same fixed
+  // order (Strongly disagree -> Strongly agree), so the answer scale reads
+  // like a normal rating scale and nobody has to re-learn it question by
+  // question.
+  QUESTIONS = shuffle(CFG.questions);
   ANSWERS = {};
   qIndex = 0;
   show("quiz");
@@ -88,8 +88,8 @@ function checks() {
   if (fwd.length && rev.length)
     flags.reverse = Math.abs(mean(fwd.map(a => a.points)) -
                              mean(rev.map(a => a.points))) > CFG.reverse_gap_flag;
-  // 2 — same-button bias: no careful person clicks one position on most
-  // of the scoring questions (options are rotated, so "top of the screen").
+  // 2 — same-button bias: no careful person clicks the same one position
+  // (e.g. always "Agree") on most of the scoring questions.
   const counts = {};
   scored.forEach(a => counts[a.pos] = (counts[a.pos] || 0) + 1);
   flags.sameButton = scored.length &&
