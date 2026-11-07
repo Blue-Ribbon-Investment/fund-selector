@@ -9,26 +9,80 @@
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="brand">
-      <h1>Which investor are you?</h1>
-      <div class="sub">20 quick questions, about 4 minutes. Your answers pick the style of ranking that fits you.</div>
+
+  <!-- ============ LANDING ============ -->
+  <div id="landingStage" class="a-stage">
+    <div class="topbar">
+      <div class="brandmini"><span class="dot"></span>Fund Selector <span class="tag">· the investor-type check</span></div>
+      <a class="mlink" href="../">Back to the rankings</a>
     </div>
-  </header>
+
+    <div class="hero">
+      <div class="kicker">Fund Selector · 20 questions · about 4 minutes</div>
+      <h1>Find the funds that fit <em>the way you're wired</em>.</h1>
+      <p class="hero-sub">Answer 20 everyday questions about how you make choices — not money
+        questions. We work out your investor type, and hand you the best fund in each of
+        five fund styles, picked just for you.</p>
+      <button class="btn cta" id="startQuizBtn">Start the 20 questions</button>
+      <div class="meta">No financial jargon&nbsp;&nbsp;·&nbsp;&nbsp;answers stay private, on your advisor's records only&nbsp;&nbsp;·&nbsp;&nbsp;you'll always know why each fund was picked</div>
+    </div>
+
+    <div class="how">
+      <div class="howcard"><div class="n">1</div>
+        <h3>Answer 20 questions</h3>
+        <p>Everyday choices — "I try new things before others do." They come in a fresh
+          order every time, so just answer the way it actually feels. There's no right answer.</p>
+      </div>
+      <div class="howcard"><div class="n">2</div>
+        <h3>We read your style</h3>
+        <p>Your answers tell us whether you're the careful, steady saver, the balanced
+          all-rounder, or the full-throttle grower. We call that your investor type.</p>
+      </div>
+      <div class="howcard"><div class="n">3</div>
+        <h3>Get your five funds</h3>
+        <p>One best fund in each of five fund styles, chosen with your style in mind — and
+          a plain-English "why we picked this" on every single card.</p>
+      </div>
+    </div>
+
+    <div class="youget">
+      <h2 class="sec">What you'll see at the end</h2>
+      <div class="catrow">
+        <div class="catchip"><b>Large cap</b><span>one best fund, picked for you</span></div>
+        <div class="catchip"><b>Large &amp; Mid cap</b><span>one best fund, picked for you</span></div>
+        <div class="catchip"><b>Mid cap</b><span>one best fund, picked for you</span></div>
+        <div class="catchip"><b>Small cap</b><span>one best fund, picked for you</span></div>
+        <div class="catchip"><b>Flexi cap</b><span>one best fund, picked for you</span></div>
+      </div>
+      <p class="note">Every fund on your list carries a short explanation written so a
+        ten-year-old could follow it — no jargon, no wall of numbers.</p>
+    </div>
+
+    <p class="note foot">Fund Selector · results are an internal research tool, not a recommendation to buy or sell.</p>
+  </div>
 
   <!-- ============ QUIZ ============ -->
-  <div id="quizStage" class="card qcard">
-    <div id="qProgress"><span class="bar"></span><span class="lbl"></span></div>
+  <div id="quizStage" class="a-stage card qcard" hidden>
+    <div class="qtop">
+      <span class="brandmini"><span class="dot"></span>Fund Selector</span>
+      <span class="qline">
+        <span id="qProgress"><span class="bar"></span><span class="lbl"></span></span>
+        <button class="mlink" id="backHome" type="button">Start over</button>
+      </span>
+    </div>
     <div id="qBox"></div>
     <div id="qHint" class="note">Answer the way that actually feels like you — there's no right answer here.</div>
   </div>
 
   <!-- ============ CONSENT + DETAILS ============ -->
-  <div id="detailsStage" class="card qcard" hidden>
+  <div id="detailsStage" class="a-stage card qcard" hidden>
     <h2>You're all done — let's record it</h2>
-    <p class="note">Your team keeps a private log: name, number, your result and the time. This is stored on the team's records only, never shown publicly or sold.</p>
-    <div class="field"><label>Name</label><input id="inName" autocomplete="name" placeholder="Your name"></div>
-    <div class="field"><label>Mobile number</label><input id="inMobile" inputmode="tel" autocomplete="tel" placeholder="10-digit number"></div>
+    <p class="note">Your advisor's team keeps a private log: your name, number, your
+      result and the time. It's stored on their records only — never shown publicly, never sold.</p>
+    <div class="dgrid">
+      <div class="field"><label>Name</label><input id="inName" autocomplete="name" placeholder="Your name"></div>
+      <div class="field"><label>Mobile number</label><input id="inMobile" inputmode="tel" autocomplete="tel" placeholder="10-digit number"></div>
+    </div>
     <label class="consent"><input type="checkbox" id="inConsent">
       <span>I'm okay with my name and number being stored with the team's records for this result.</span></label>
     <button class="btn" id="submitRec">Save &amp; see my result</button>
@@ -36,10 +90,10 @@
   </div>
 
   <!-- ============ RESULT ============ -->
-  <div id="resultStage" class="card qcard" hidden>
-    <div class="band" id="bandName"></div>
-    <div class="note" id="bandLine"></div>
-    <h3>Your best fund in each style of fund — and why we chose each one</h3>
+  <div id="resultStage" class="a-stage card qcard" hidden>
+    <span class="band" id="bandName"></span>
+    <p class="note bandline" id="bandLine"></p>
+    <h3 class="reshead">Your best fund in each style of fund — and why we chose each one</h3>
     <div id="top5"></div>
     <div id="codeBox" hidden>
       <h3>Your result code</h3>
@@ -47,16 +101,16 @@
       <button class="btn ghost" id="copyBtn">Copy code &amp; link</button>
       <p class="note" id="codeNote"></p>
     </div>
+    <button class="mlink small" id="doAgain" type="button">Retake the quiz</button>
   </div>
 
   <!-- ============ NEEDS REVIEW ============ -->
-  <div id="reviewStage" class="card qcard" hidden>
+  <div id="reviewStage" class="a-stage card qcard" hidden>
     <h2>A quick personal check</h2>
     <p class="note" id="reviewNote">Some of your answers don't quite add up with each other.</p>
     <button class="btn" id="tryAgain">Look at them again</button>
   </div>
 
-  <p class="note foot">Fund Selector · results are an internal research tool, not a recommendation to buy or sell. <a href="../">Back to the ranking</a></p>
 </div>
 <script src="quiz.js"></script>
 </body>

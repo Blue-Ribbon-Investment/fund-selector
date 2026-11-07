@@ -1,50 +1,111 @@
-/* Client-facing risk assessment */
-.qcard{padding:18px 20px;margin:14px 0}
-.picks{display:grid;gap:10px;margin:8px 0}
-.pickcard{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-.pick-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px}
-.pick-num{font-size:13px;font-weight:700;color:#fff;background:var(--acc);border-radius:5px;
-          padding:0 7px;line-height:18px}
-.pick-head b{font-size:14.5px}
-.pick-cat{font-size:11px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:1px 9px}
-.pick-why p{margin:3px 0;font-size:13px;color:var(--txt);line-height:1.5}
-.pick-gtn{margin-top:8px;font-size:12.5px;color:var(--amber);border-top:1px dashed var(--line);
-          padding-top:8px;line-height:1.45}
-.qcard h2{font-size:18px;margin:0 0 4px}
-.qcard h3{font-size:15px;margin:14px 0 8px}
-#qProgress{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-#qProgress .bar{flex:1;height:5px;background:var(--line);border-radius:3px;overflow:hidden;position:relative}
-#qProgress .bar::before{content:"";position:absolute;inset:0;width:var(--p,0%);background:var(--acc);transition:width .25s}
+/* Client-facing risk assessment — dark theme shared with the main site */
+
+/* ============ layout shell ============ */
+.a-stage{max-width:860px;margin:0 auto;padding:10px 0}
+
+/* ============ top bar / links ============ */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0 6px;flex-wrap:wrap}
+.brandmini{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.brandmini .dot{width:9px;height:9px;background:var(--good);border-radius:50%;display:inline-block}
+.brandmini .tag{font-weight:400;font-size:12px;color:var(--mut)}
+.mlink{color:var(--mut);text-decoration:none;font-size:12.5px;border:1px solid var(--line);
+       padding:6px 12px;border-radius:99px;background:var(--card);cursor:pointer}
+.mlink:hover{color:var(--txt);border-color:var(--acc)}
+.mlink.small{font-size:12px;padding:5px 12px;margin-top:16px}
+
+/* ============ landing hero ============ */
+.hero{padding:24px 0 4px}
+.kicker{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--acc);
+        font-weight:700;margin-bottom:14px}
+.hero h1{font-size:34px;line-height:1.15;margin:0 0 14px;letter-spacing:-.3px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero-sub{font-size:15px;color:var(--mut);line-height:1.65;max-width:620px;margin:0 0 24px}
+.btn.cta{font-size:15px;padding:13px 26px;background:linear-gradient(135deg,var(--acc),#3f6fe0);
+         box-shadow:0 8px 24px rgba(91,140,255,.3);border-radius:10px}
+.btn.cta:hover{filter:brightness(1.08)}
+.hero .meta{margin-top:14px;font-size:12px;color:var(--mut)}
+
+/* ============ landing: how it works ============ */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.howcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.howcard .n{width:30px;height:30px;border-radius:8px;background:rgba(91,140,255,.15);color:var(--acc);
+            font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:14px}
+.howcard h3{margin:0 0 6px;font-size:14.5px}
+.howcard p{margin:0;font-size:12.5px;color:var(--mut);line-height:1.55}
+
+/* ============ landing: what you'll get ============ */
+.youget{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin:6px 0 18px}
+.youget .sec{font-size:16px;margin:0 0 14px}
+.catrow{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.catchip{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:9px 13px;
+         display:flex;flex-direction:column;gap:2px;flex:1;min-width:118px}
+.catchip b{font-size:13px}
+.catchip span{font-size:10.5px;color:var(--mut)}
+.note{font-size:12.5px;color:var(--mut);line-height:1.5}
+
+/* ============ quiz screen ============ */
+.qcard{padding:20px 22px}
+.qtop{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.qline{display:flex;align-items:center;gap:14px;flex:1;min-width:0;flex-wrap:wrap}
+#qProgress{display:flex;align-items:center;gap:10px;flex:1;min-width:220px}
+#qProgress .bar{flex:1;height:8px;background:var(--card2);border:1px solid var(--line);
+                border-radius:99px;overflow:hidden;position:relative}
+#qProgress .bar::before{content:"";position:absolute;inset:0;width:var(--p,0%);
+                        background:linear-gradient(90deg,var(--acc),#7ea2ff);transition:width .25s}
 #qProgress .lbl{font-size:11.5px;color:var(--mut);white-space:nowrap}
-.qtext{font-size:17px;line-height:1.4;margin:6px 0 16px}
-.opts{display:grid;gap:8px}
-.opt{display:flex;gap:10px;align-items:center;text-align:left;background:var(--card2);
-     border:1px solid var(--line);border-radius:9px;padding:12px 14px;cursor:pointer;
-     color:var(--txt);font-size:13.5px;font-family:inherit}
-.opt:hover{border-color:var(--acc)}
-.opt .letter{font-size:10.5px;color:var(--mut);border:1px solid var(--line);border-radius:5px;
-             width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex:none}
-.field{margin:10px 0}
+.qtext{font-size:22px;line-height:1.35;margin:18px 0 20px;letter-spacing:-.2px}
+.opts{display:grid;gap:9px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;background:var(--card2);
+     border:1px solid var(--line);border-radius:11px;padding:14px 16px;cursor:pointer;
+     color:var(--txt);font-size:14px;font-family:inherit;
+     transition:transform .1s,border-color .15s,background .15s}
+.opt:hover{border-color:var(--acc);background:rgba(91,140,255,.08);transform:translateX(3px)}
+.opt .letter{font-size:11px;font-weight:700;color:var(--mut);border:1px solid var(--line);
+             border-radius:6px;width:24px;height:24px;display:flex;align-items:center;
+             justify-content:center;flex:none;background:var(--card)}
+.opt:hover .letter{color:var(--acc);border-color:var(--acc)}
+
+/* ============ details / result ============ */
+.qcard h2{font-size:20px;margin:0 0 8px}
+.qcard h3{font-size:15px;margin:14px 0 8px}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0}
+.field{margin:0}
 .field label{display:block;font-size:12px;color:var(--mut);margin-bottom:4px}
-.field input{width:100%;max-width:340px;background:var(--card2);border:1px solid var(--line);
-             border-radius:8px;color:var(--txt);padding:9px 12px;font-size:14px;font-family:inherit}
-.consent{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--mut);margin:12px 0}
+.field input{width:100%;background:var(--card2);border:1px solid var(--line);border-radius:8px;
+             color:var(--txt);padding:10px 12px;font-size:14px;font-family:inherit}
+.field input:focus{outline:none;border-color:var(--acc)}
+.consent{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--mut);margin:14px 0}
 .consent input{margin-top:2px;accent-color:var(--acc)}
-.btn{background:var(--acc);border:none;color:#fff;border-radius:8px;padding:10px 18px;
-     font-size:13.5px;cursor:pointer;font-family:inherit;margin-top:8px}
-.btn.ghost{background:none;border:1px solid var(--line);color:var(--txt)}
-.btn.ghost:hover{border-color:var(--acc)}
-.band{display:inline-block;font-size:15px;font-weight:700;background:var(--card2);
-      border:1px solid var(--line);border-radius:8px;padding:8px 14px;margin:8px 0}
-.ftable{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0}
-.ftable th{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);
-           text-align:right;padding:6px 8px;border-bottom:1px solid var(--line)}
-.ftable th.l{text-align:left}
-.ftable td{padding:8px;border-bottom:1px solid #1f2436;text-align:right;
-           font-variant-numeric:tabular-nums}
-.ftable td.l{text-align:left}
-.ftable td.l small{display:block;color:var(--mut);font-size:11px}
-.code{font-size:22px;font-weight:700;letter-spacing:2px;background:var(--card2);
+.band{display:inline-block;font-size:16px;font-weight:700;
+      background:linear-gradient(135deg,rgba(91,140,255,.25),rgba(91,140,255,.06));
+      border:1px solid var(--acc);border-radius:10px;padding:10px 18px;margin:6px 0 10px;color:#fff}
+.bandline{font-size:14px;line-height:1.6;max-width:640px}
+.reshead{font-size:16px;margin:20px 0 10px}
+.picks{display:grid;gap:12px;margin:10px 0}
+.pickcard{background:var(--card2);border:1px solid var(--line);border-radius:13px;padding:16px 18px;
+          transition:transform .12s,border-color .15s}
+.pickcard:hover{transform:translateY(-2px);border-color:var(--acc)}
+.pick-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+.pick-num{font-size:12px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--acc),#3f6fe0);
+          border-radius:6px;padding:1px 8px;line-height:18px}
+.pick-head b{font-size:15.5px}
+.pick-cat{font-size:11px;color:var(--acc);border:1px solid rgba(91,140,255,.5);border-radius:99px;
+          padding:1px 10px;background:rgba(91,140,255,.1)}
+.pick-why p{margin:4px 0;font-size:13.5px;color:var(--txt);line-height:1.5}
+.pick-gtn{margin-top:10px;font-size:12.5px;color:var(--amber);border-top:1px dashed var(--line);
+          padding-top:10px;line-height:1.5}
+.code{font-size:20px;font-weight:700;letter-spacing:2px;background:var(--card2);
       border:1px solid var(--line);border-radius:9px;padding:12px 16px;margin:8px 0;
-      font-variant-numeric:tabular-nums}
-.foot{margin:22px 0 60px;font-size:11.5px}
+      font-variant-numeric:tabular-nums;word-break:break-all}
+.btn{background:var(--acc);border:none;color:#fff;border-radius:8px;padding:11px 20px;
+     font-size:13.5px;cursor:pointer;font-family:inherit;margin-top:10px}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--txt);margin-left:8px}
+.btn.ghost:hover{border-color:var(--acc);filter:none}
+
+/* ============ small screens ============ */
+@media (max-width:700px){
+  .how{grid-template-columns:1fr}
+  .hero h1{font-size:26px}
+  .dgrid{grid-template-columns:1fr}
+}

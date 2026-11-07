@@ -10,8 +10,9 @@
 */
 const $ = s => document.querySelector(s);
 
-const stages = { quiz: $("#quizStage"), details: $("#detailsStage"),
-                 result: $("#resultStage"), review: $("#reviewStage") };
+const stages = { landing: $("#landingStage"), quiz: $("#quizStage"),
+                 details: $("#detailsStage"), result: $("#resultStage"),
+                 review: $("#reviewStage") };
 const qBox = $("#qBox");
 let CFG = null, AGG = null, META = null;
 let QUESTIONS = [], ANSWERS = {}, qIndex = 0, qStart = 0;
@@ -42,6 +43,11 @@ function startQuiz() {
   QUESTIONS = shuffle(CFG.questions);
   ANSWERS = {};
   qIndex = 0;
+  show("landing");
+}
+
+function beginQuiz() {
+  // Landing page is already showing (questions are pre-shuffled); now run it.
   show("quiz");
   showQuestion(0);
 }
@@ -162,7 +168,7 @@ function finishQuiz() {
       "That's usually just a question worth a proper answer — let's look at the set again.";
     $("#tryAgain").hidden = false;
     $("#tryAgain").textContent = "Look at them again";
-    $("#tryAgain").onclick = () => { attempt = 2; startQuiz(); };
+    $("#tryAgain").onclick = () => { attempt = 2; startQuiz(); beginQuiz(); };
     return;
   }
   const sc = riskScore();
@@ -341,6 +347,9 @@ function pickCards(list) {
 }
 
 function wireDetails() {
+  $("#startQuizBtn").onclick = beginQuiz;
+  $("#backHome").onclick = startQuiz;      // fresh shuffle + back to the landing page
+  $("#doAgain").onclick = startQuiz;       // retake = fresh shuffle + landing page
   $("#submitRec").onclick = async () => {
     const name = $("#inName").value.trim();
     const phone = $("#inMobile").value.replace(/\D/g, "");
