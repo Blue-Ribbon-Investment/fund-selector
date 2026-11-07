@@ -54,14 +54,24 @@
   "bands_pending_team_review": true,
   "bands": [
     { "id": "conservative",    "name": "Conservative",    "min": 0,  "max": 29,
+      "client_style": "Your answers say you would rather see your money grow slowly but surely, than watch it bounce around. So we picked funds that stay calm even when the market is wild.",
+      "client_label": "a careful, steady saver",
       "weights": { "er": 10, "sharpe": 25, "ir": 0,  "vol": 35, "cagr": 5,  "beta": 10, "treynor": 0,  "alpha": 0,  "selnet": 0,  "tracking": 15 } },
     { "id": "mod_cautious",    "name": "Moderately Conservative", "min": 30, "max": 49,
+      "client_style": "You're okay with your money going up and down a little, but not a lot. We picked funds that grow a bit more than calm ones, while still not swinging too hard.",
+      "client_label": "a careful grower",
       "weights": { "er": 10, "sharpe": 20, "ir": 10, "vol": 25, "cagr": 10, "beta": 5,  "treynor": 0,  "alpha": 0,  "selnet": 10, "tracking": 10 } },
     { "id": "balanced",        "name": "Balanced",        "min": 50, "max": 69,
+      "client_style": "You don't get nervous when markets wobble, and you're happy to wait out a bad year for a good result. We picked funds that mix steady parts with growth parts.",
+      "client_label": "an all-round investor",
       "weights": { "er": 5,  "sharpe": 20, "ir": 15, "vol": 20, "cagr": 15, "beta": 0,  "treynor": 5,  "alpha": 10, "selnet": 10, "tracking": 0 } },
     { "id": "mod_growth",      "name": "Moderately Growth-Oriented", "min": 70, "max": 84,
+      "client_style": "You want real growth, and you're fine with the money dipping now and then to get it. We picked funds that aim higher and are built to take the bumps.",
+      "client_label": "a confident grower",
       "weights": { "er": 5,  "sharpe": 10, "ir": 20, "vol": 10, "cagr": 20, "beta": 0,  "treynor": 10, "alpha": 10, "selnet": 15, "tracking": 0 } },
     { "id": "growth",          "name": "Growth-Oriented", "min": 85, "max": 100,
+      "client_style": "You're after the biggest growth you can get, and small dips don't shake you. We picked funds that run at full speed — the biggest movers, held through the rough parts too.",
+      "client_label": "a full-throttle grower",
       "weights": { "er": 0,  "sharpe": 5,  "ir": 30, "vol": 10, "cagr": 25, "beta": 0,  "treynor": 10, "alpha": 10, "selnet": 10, "tracking": 0 } }
   ]
 }

@@ -1,5 +1,15 @@
 /* Client-facing risk assessment */
 .qcard{padding:18px 20px;margin:14px 0}
+.picks{display:grid;gap:10px;margin:8px 0}
+.pickcard{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.pick-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.pick-num{font-size:13px;font-weight:700;color:#fff;background:var(--acc);border-radius:5px;
+          padding:0 7px;line-height:18px}
+.pick-head b{font-size:14.5px}
+.pick-cat{font-size:11px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:1px 9px}
+.pick-why p{margin:3px 0;font-size:13px;color:var(--txt);line-height:1.5}
+.pick-gtn{margin-top:8px;font-size:12.5px;color:var(--amber);border-top:1px dashed var(--line);
+          padding-top:8px;line-height:1.45}
 .qcard h2{font-size:18px;margin:0 0 4px}
 .qcard h3{font-size:15px;margin:14px 0 8px}
 #qProgress{display:flex;align-items:center;gap:10px;margin-bottom:14px}

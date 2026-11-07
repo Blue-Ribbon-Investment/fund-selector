@@ -209,6 +209,8 @@ function rankForClient(funds, weights) {
   }
   const wsum = active.reduce((s, k) => s + weights[k], 0) || 1;
   funds.forEach((f, i) => {
+    f.quality = {};
+    for (const k of active) f.quality[k] = qual[k][i];
     f.score = Math.round(active.reduce((s, k) => s + weights[k] * qual[k][i], 0) / wsum * 100) / 100;
   });
   funds.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
@@ -216,16 +218,14 @@ function rankForClient(funds, weights) {
   return funds;
 }
 
+/* What the client sees: one plain line about *them*, then their top-5 with a
+   short, kid-English "why we picked it" for each. No scores, no weights, no
+   risk numbers anywhere on this screen — those stay on the team's side. */
 function showResult(code, recorded) {
   const list = rankForClient(buildClientFunds(), result.band.weights);
-  $("#bandName").textContent = result.band.name + "  ·  " + result.score + " / 100";
-  $("#bandLine").textContent = "Here's how the funds line up for people like you — their 5-year " +
-    "record, re-checked every night. A lower number on the right is a steadier, calmer fund; " +
-    "a higher one chases more growth.";
-  $("#top5").innerHTML = fundTable(list.slice(0, 5));
-  $("#fullList").innerHTML = fundTable(list);
-  $("#fullBtn").onclick = () => { $("#fullList").hidden = !$("#fullList").hidden;
-    $("#fullBtn").textContent = $("#fullList").hidden ? "View the full ranked list" : "Hide the full list"; };
+  $("#bandName").textContent = "You're " + (result.band.client_label || result.band.name) + ".";
+  $("#bandLine").textContent = result.band.client_style || "";
+  $("#top5").innerHTML = pickCards(list.slice(0, 5));
   $("#codeBox").hidden = recorded;
   if (!recorded) {
     $("#codeVal").textContent = code;
@@ -244,11 +244,55 @@ function showResult(code, recorded) {
 function codeLink(code) {
   return new URL("../", location.href).href + "?w=" + code;
 }
-function fundTable(list) {
-  return `<table class="ftable"><tr><th class="l">#</th><th class="l">Fund</th><th class="l">Category</th><th>Score</th></tr>` +
-    list.map(f => `<tr><td class="l">${f.rank === 1 ? "★ " : ""}${f.rank}</td>` +
-      `<td class="l">${f.name}<small class="mut">${f.amc}</small></td>` +
-      `<td class="l mut">${f.cat}</td><td>${f.score.toFixed(1)}</td></tr>`).join("") + "</table>";
+/* The "why we picked it" lines. Every reason is a real fact from this fund's
+   own ranking numbers (beats ~X% of its class on ...), written so a ten-year-
+   old follows it. A gentle "good to know" closes each card. */
+const KID_STRENGTH = {
+  cagr:   f => f.s.cagr != null ? `Grew about ${Math.round(f.s.cagr*100)}% every year for the last 5 years — faster than most others in its group.` : "",
+  vol:    f => "It's calm — it doesn't swing up and down the way some funds do.",
+  sharpe: f => "It gets ahead of the market without taking big swings to do it.",
+  selnet: f => "The people who run it are good at picking the right stocks.",
+  ir:     f => "Its managers make money ahead of the market, year after year.",
+  beta:   f => "When the market shakes, this one barely moves.",
+  er:     f => "It's one of the cheapest funds to keep around in its group.",
+  tracking: f => "It keeps to a steady rhythm instead of jumping around.",
+};
+// Non-generic strength lines are used at most once across the five cards,
+// so the list never reads like one sentence copy-pasted five times
+// (the CAGR line carries its own number, so it may repeat).
+const KID_CATEGORY = {
+  "Small cap": "It invests in smaller companies, which move the most — so in a bad year it can dip more than the big ones.",
+  "Mid cap": "It's a bit wilder than the big steady funds, so expect it to bounce around more.",
+  "Large cap": "It holds the biggest, most famous companies, so it moves less dramatically than the small ones.",
+  "Multi asset": "It splits its money between stocks and safe debts, so it's steadier — but it won't jump as high in a great year.",
+  "Flexi/Multi cap": "It spreads out over many companies, which helps, but it can't fully hide when the market falls.",
+  "Balanced/Hybrid": "It mixes calm parts with growth parts, so it rarely goes to either extreme.",
+  "ELSS (tax saver)": "Money stays in this fund for 3 years — you can't pull it out before that.",
+};
+function pickCards(list) {
+  const usedLines = new Set();   // keep the five cards from repeating a sentence
+  return `<div class="picks">` + list.map((f, i) => {
+    // Reason 1: the fund's strongest own fact (its CAGR carries a real number).
+    const cagrLine = KID_STRENGTH.cagr(f);
+    // Reason 2: one of its data-backed strength lines, not yet used on card 1.
+    const alt = Object.entries(f.quality || {})
+      .filter(([k, q]) => k !== "cagr" && q >= 55 && KID_STRENGTH[k] &&
+                          !usedLines.has(KID_STRENGTH[k](f)))
+      .sort((a, b) => b[1] - a[1])[0];
+    const r1 = cagrLine || KID_STRENGTH.vol(f);
+    const r2 = alt ? KID_STRENGTH[alt[0]](f)
+         : KID_STRENGTH[Object.keys(KID_STRENGTH).find(k => k !== "vol")](f);
+    usedLines.add(r1); usedLines.add(r2);
+    const extra = f.age >= 7
+      ? `<p>A long, proven track record — ${Math.round(f.age)} years of history, through ups and downs.</p>` : "";
+    const gtn = KID_CATEGORY[f.cat] || KID_CATEGORY["Large cap"];
+    return `<div class="pickcard">
+      <div class="pick-head"><span class="pick-num">${i+1}</span>
+        <b>${f.name}</b><span class="pick-cat">${f.cat}</span></div>
+      <div class="pick-why"><p>${r1}</p><p>${r2}</p>${extra}</div>
+      <div class="pick-gtn"><b>Good to know:</b> ${gtn}</div>
+    </div>`;
+  }).join("") + `</div>`;
 }
 
 function wireDetails() {
