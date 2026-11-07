@@ -250,14 +250,23 @@ function rankForClient(funds, weights) {
   return funds;
 }
 
-/* What the client sees: one plain line about *them*, then their top-5 with a
-   short, kid-English "why we picked it" for each. No scores, no weights, no
-   risk numbers anywhere on this screen — those stay on the team's side. */
+/* What the client sees: one plain line about *them*, then one winner from
+   each of five fixed categories (the highest-scoring fund in that category
+   under the client's personal weights), each with a short, kid-English "why
+   we picked it". No scores, no weights, no risk numbers anywhere on this
+   screen — those stay on the team's side. */
+const CLIENT_CATEGORIES = ["Large cap", "Large & Mid cap", "Mid cap",
+                          "Small cap", "Flexi/Multi cap"];
 function showResult(code, recorded) {
   const list = rankForClient(buildClientFunds(), result.weights);
+  // list is sorted by the client's personal score, so the first fund that
+  // matches a category is that category's winner
+  const picks = CLIENT_CATEGORIES
+    .map(cat => list.find(f => f.cat === cat))
+    .filter(Boolean);
   $("#bandName").textContent = "You're " + (result.band.client_label || result.band.name) + ".";
   $("#bandLine").textContent = result.band.client_style || "";
-  $("#top5").innerHTML = pickCards(list.slice(0, 5));
+  $("#top5").innerHTML = pickCards(picks);
   $("#codeBox").hidden = recorded;
   if (!recorded) {
     $("#codeVal").textContent = code;
@@ -295,6 +304,7 @@ const KID_STRENGTH = {
 const KID_CATEGORY = {
   "Small cap": "It invests in smaller companies, which move the most — so in a bad year it can dip more than the big ones.",
   "Mid cap": "It's a bit wilder than the big steady funds, so expect it to bounce around more.",
+  "Large & Mid cap": "It mixes the big steady companies with some smaller, faster-growing ones — a bit of both worlds.",
   "Large cap": "It holds the biggest, most famous companies, so it moves less dramatically than the small ones.",
   "Multi asset": "It splits its money between stocks and safe debts, so it's steadier — but it won't jump as high in a great year.",
   "Flexi/Multi cap": "It spreads out over many companies, which helps, but it can't fully hide when the market falls.",
