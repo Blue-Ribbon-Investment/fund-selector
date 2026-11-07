@@ -54,7 +54,7 @@
   "_formula_note": "Ranking weights are NOT a hand-picked table anymore: every parameter is a straight line weight = base + slope x G, where G = risk score / 100 (0 very cautious, 1 very growth-oriented). Calmness falls exactly as growth rises; the lines are normalized to sum to 100, rounded to 5s. Bands below only provide the client-facing label + style line.",
   "weight_formula": {
     "round_to": 5,
-    "_shape": "base = the weight for a fully-cautious client (score 0), slope = how it moves by score 100. Calm/safe params (vol, sharpe, tracking, cost) start high and fall; growth/skill params (CAGR, info ratio, selectivity) start near zero and rise. Picked so both ends sum to 100.",
+    "_shape": "base = the weight for a fully-cautious client (score 0), slope = how it moves by score 100. Calm/safe params (vol, sharpe, beta, tracking) start high and fall; growth/skill params (CAGR, info ratio, selectivity) start near zero and rise. Picked so both ends sum to 100. Cost was replaced by beta (market sensitivity): expense-ratio data is unavailable (n/a for all funds), but beta is computed for every fund — a cautious client's list favours funds that fall less than the market.",
     "params": {
       "vol":      { "base": 40, "slope": -40 },
       "sharpe":   { "base": 30, "slope": -20 },
@@ -62,9 +62,9 @@
       "ir":       { "base": 0,  "slope": 25 },
       "selnet":   { "base": 0,  "slope": 20 },
       "tracking": { "base": 15, "slope": -15 },
-      "er":       { "base": 10, "slope": -10 },
+      "beta":     { "base": 10, "slope": -10 },
+      "er":       { "base": 0,  "slope": 0 },
       "alpha":    { "base": 0,  "slope": 0 },
-      "beta":     { "base": 0,  "slope": 0 },
       "treynor":  { "base": 0,  "slope": 0 }
     }
   },
