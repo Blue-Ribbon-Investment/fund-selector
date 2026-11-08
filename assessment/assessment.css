@@ -80,6 +80,16 @@
       background:linear-gradient(135deg,rgba(91,140,255,.25),rgba(91,140,255,.06));
       border:1px solid var(--acc);border-radius:10px;padding:10px 18px;margin:6px 0 10px;color:#fff}
 .bandline{font-size:14px;line-height:1.6;max-width:640px}
+.youpts{background:var(--card2);border:1px solid var(--line);border-radius:12px;
+       padding:16px 18px;margin:8px 0}
+.youpts h3{margin:0 0 10px;font-size:14.5px}
+.youpts ul{margin:0;padding-left:2px;list-style:none}
+.youpts li{font-size:13.5px;line-height:1.55;padding:5px 0 5px 22px;position:relative}
+.youpts li::before{content:"";position:absolute;left:2px;top:11px;width:8px;height:8px;
+                   border-radius:50%;background:var(--acc);opacity:.85}
+.youpts .retake{margin:12px 0 0;padding-top:12px;border-top:1px dashed var(--line)}
+.youpts .retake a{color:var(--acc);text-decoration:none;font-weight:600}
+.youpts .retake a:hover{text-decoration:underline}
 .reshead{font-size:16px;margin:20px 0 10px}
 .picks{display:grid;gap:12px;margin:10px 0}
 .pickcard{background:var(--card2);border:1px solid var(--line);border-radius:13px;padding:16px 18px;

@@ -275,6 +275,7 @@ function showResult(code, recorded) {
     .filter(Boolean);
   $("#bandName").textContent = "You're " + (result.band.client_label || result.band.name) + ".";
   $("#bandLine").textContent = result.band.client_style || "";
+  renderYouPoints();
   $("#top5").innerHTML = pickCards(picks);
   $("#codeBox").hidden = recorded;
   if (!recorded) {
@@ -294,6 +295,56 @@ function showResult(code, recorded) {
 function codeLink(code) {
   return new URL("../", location.href).href + "?w=" + code;
 }
+/* What the client's own answers say about them: 4-6 plain-English lines,
+   pulled from the questions they answered most strongly, plus the retake
+   invite. Distractors carry no line (weight 0). */
+const YOU_POINTS = {
+  f1:  "You like being the first to try new things — you don't wait for others to clear the way.",
+  f2:  "Even when you're missing some information, you make the call and move forward.",
+  f3:  "If you think you have an edge, you're happy to take the bet.",
+  f4:  "When something doesn't work out, you don't stop there — you try again straight away.",
+  f5:  "You'll start a new project even when the result is uncertain — the unknown doesn't stop you.",
+  f6:  "You'll try an unfamiliar restaurant before anyone has vouched for it.",
+  f7:  "You buy the new thing on the day it launches — you like being early.",
+  f8:  "You pick up new skills and hobbies on your own initiative, nobody tells you to.",
+  f9:  "A small chance at a big reward is worth taking for you.",
+  f10: "Given the choice, you'd take the riskier one with more upside over the safe, smaller one.",
+  f11: "When you're unsure, you trust your own judgment over other people's advice.",
+  f12: "You act on a good idea early, before other people are certain about it.",
+  r1:  "You carry an umbrella even on a sunny day — you like to be covered for the unexpected.",
+  r2:  "When you're unsure, you choose the safer option.",
+  r3:  "You keep more of a thing than you need, so you never run out.",
+  r4:  "You'd rather be certain of a smaller result than gamble on a bigger one."
+};
+const YOU_POINTS_GEN = [
+  "For most of these, you sat in the middle — you're not an extreme in either direction.",
+  "You keep options open instead of going all-in on one.",
+  "You think about how much a result can move before you care how much it grows.",
+  "You mix the safe moves with the bold ones, depending on the situation."
+];
+function youPoints() {
+  // The options always sit in the same fixed order: box 3 = "Agree", box 4 =
+  // "Strongly agree". So a line is only earned when the person actually
+  // AGREED with the statement as it's written — never for one they pushed
+  // back on. Strength: "Strongly agree" (box 4) outranks "Agree" (box 3).
+  // ANSWERS is keyed by question id, so the id comes from the key (the stored
+  // object itself has no id field).
+  const ranked = Object.entries(ANSWERS)
+    .filter(([id, a]) => a.w > 0 && a.pos >= 3 && YOU_POINTS[id])
+    .map(([id, a]) => ({ id, strength: a.pos - 2 }))
+    .sort((x, y) => y.strength - x.strength || x.id.localeCompare(y.id));
+  const lines = ranked.slice(0, 6).map(a => YOU_POINTS[a.id]);
+  let g = 0;
+  while (lines.length < 4 && g < YOU_POINTS_GEN.length) lines.push(YOU_POINTS_GEN[g++]);
+  return lines.slice(0, 6);
+}
+function renderYouPoints() {
+  const els = youPoints().map(l => `<li>${l}</li>`).join("");
+  $("#youPts").innerHTML = `<h3>What your answers say about you</h3><ul>${els}</ul>
+    <p class="note retake">If any of that doesn't sound like you, <a href="#" id="youRetake">retake the quiz</a> — it only takes four minutes.</p>`;
+  $("#youRetake").onclick = e => { e.preventDefault(); startQuiz(); beginQuiz(); };
+}
+
 /* The "why we picked it" lines. Every reason is a real fact from this fund's
    own ranking numbers (beats ~X% of its class on ...), written so a ten-year-
    old follows it. A gentle "good to know" closes each card. */
