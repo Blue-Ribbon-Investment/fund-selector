@@ -295,52 +295,57 @@ function showResult(code, recorded) {
 function codeLink(code) {
   return new URL("../", location.href).href + "?w=" + code;
 }
-/* What the client's own answers say about them: 4-6 plain-English lines,
-   pulled from the questions they answered most strongly, plus the retake
-   invite. Distractors carry no line (weight 0). */
-const YOU_POINTS = {
-  f1:  "You like being the first to try new things — you don't wait for others to clear the way.",
-  f2:  "Even when you're missing some information, you make the call and move forward.",
-  f3:  "If you think you have an edge, you're happy to take the bet.",
-  f4:  "When something doesn't work out, you don't stop there — you try again straight away.",
-  f5:  "You'll start a new project even when the result is uncertain — the unknown doesn't stop you.",
-  f6:  "You'll try an unfamiliar restaurant before anyone has vouched for it.",
-  f7:  "You buy the new thing on the day it launches — you like being early.",
-  f8:  "You pick up new skills and hobbies on your own initiative, nobody tells you to.",
-  f9:  "A small chance at a big reward is worth taking for you.",
-  f10: "Given the choice, you'd take the riskier one with more upside over the safe, smaller one.",
-  f11: "When you're unsure, you trust your own judgment over other people's advice.",
-  f12: "You act on a good idea early, before other people are certain about it.",
-  r1:  "You carry an umbrella even on a sunny day — you like to be covered for the unexpected.",
-  r2:  "When you're unsure, you choose the safer option.",
-  r3:  "You keep more of a thing than you need, so you never run out.",
-  r4:  "You'd rather be certain of a smaller result than gamble on a bigger one."
-};
-const YOU_POINTS_GEN = [
-  "For most of these, you sat in the middle — you're not an extreme in either direction.",
-  "You keep options open instead of going all-in on one.",
-  "You think about how much a result can move before you care how much it grows.",
-  "You mix the safe moves with the bold ones, depending on the situation."
-];
-function youPoints() {
-  // The options always sit in the same fixed order: box 3 = "Agree", box 4 =
-  // "Strongly agree". So a line is only earned when the person actually
-  // AGREED with the statement as it's written — never for one they pushed
-  // back on. Strength: "Strongly agree" (box 4) outranks "Agree" (box 3).
-  // ANSWERS is keyed by question id, so the id comes from the key (the stored
-  // object itself has no id field).
-  const ranked = Object.entries(ANSWERS)
-    .filter(([id, a]) => a.w > 0 && a.pos >= 3 && YOU_POINTS[id])
-    .map(([id, a]) => ({ id, strength: a.pos - 2 }))
-    .sort((x, y) => y.strength - x.strength || x.id.localeCompare(y.id));
-  const lines = ranked.slice(0, 6).map(a => YOU_POINTS[a.id]);
-  let g = 0;
-  while (lines.length < 4 && g < YOU_POINTS_GEN.length) lines.push(YOU_POINTS_GEN[g++]);
-  return lines.slice(0, 6);
+/* The "why these funds" block: 4-5 lines, each quoting the client's OWN
+   answer to a specific question, saying which way that answer pointed (the
+   calm side or the growth side), and closing with one line that ties it to
+   the funds below. This is the chain: your answer -> the direction it
+   pointed -> the reason the list fits you. Distractors carry no line. */
+const POS_LABEL = ["Strongly disagree","Disagree","No opinion","Agree","Strongly agree"];
+function whyPoints() {
+  const qtext = {}; CFG.questions.forEach(q => qtext[q.id] = q.text);
+  // Direction of a single answer: +growth, -calm, 0 no signal (the middle box).
+  // Forward items: agreeing points growth, disagreeing points calm.
+  // Reversed items: agreeing points calm, disagreeing points growth.
+  const signal = (a) => {
+    if (a.pos === 2) return 0;                       // "No opinion"
+    const side = a.pos >= 3 ? 1 : -1;                 // + agree-side, - disagree-side
+    return a.type === "r" ? -side : side;             // reversed flips it
+  };
+  const entries = Object.entries(ANSWERS)
+    .filter(([id, a]) => a.w > 0 && qtext[id])
+    .map(([id, a]) => {
+      const s = signal(a);
+      return { id, label: POS_LABEL[a.pos], s, q: qtext[id] };
+    })
+    .filter(e => e.s !== 0);                          // drop the no-signal answers
+  // Most-decided first (Strongly beats plain), calm lines and growth lines
+  // interleaved so the list shows both sides the person actually took.
+  entries.sort((x, y) => Math.abs(y.s) - Math.abs(x.s) || x.id.localeCompare(y.id));
+  // Keep room for the summary line: up to 4 answer lines + 1 closing line.
+  const lines = entries.slice(0, 4).map(e => {
+    const dir = e.s > 0
+      ? "points to the growth side — you'd take a bigger swing for more upside."
+      : "points to the calm side — you'd rather keep things steadier.";
+    return `You answered “${e.label}” to “${e.q}” — that ${dir}`;
+  });
+  // One summary line tying the answers to the funds below.
+  const growthN = entries.filter(e => e.s > 0).length,
+        calmN   = entries.filter(e => e.s < 0).length;
+  let tail;
+  if (growthN === 0 && calmN === 0)
+    tail = "Most of your answers sat in the middle, so we kept the list balanced — steady, but not boring.";
+  else if (growthN > calmN)
+    tail = "More of your answers lean the growth side, so the funds below favour a little extra swing for more upside.";
+  else if (calmN > growthN)
+    tail = "More of your answers lean the calm side, so the funds below favour steadier, lower-swing picks.";
+  else
+    tail = "Your answers lean both ways, so the funds below mix steady and growth so neither extreme runs the show.";
+  lines.push(tail);
+  return lines.slice(0, 5);
 }
 function renderYouPoints() {
-  const els = youPoints().map(l => `<li>${l}</li>`).join("");
-  $("#youPts").innerHTML = `<h3>What your answers say about you</h3><ul>${els}</ul>
+  const els = whyPoints().map(l => `<li>${l}</li>`).join("");
+  $("#youPts").innerHTML = `<h3>How your answers shaped this list</h3><ul>${els}</ul>
     <p class="note retake">If any of that doesn't sound like you, <a href="#" id="youRetake">retake the quiz</a> — it only takes four minutes.</p>`;
   $("#youRetake").onclick = e => { e.preventDefault(); startQuiz(); beginQuiz(); };
 }
