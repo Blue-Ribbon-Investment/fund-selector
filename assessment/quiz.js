@@ -260,12 +260,12 @@ function rankForClient(funds, weights) {
 }
 
 /* What the client sees: one plain line about *them*, then one winner from
-   each of five fixed categories (the highest-scoring fund in that category
+   each of six fixed categories (the highest-scoring fund in that category
    under the client's personal weights), each with a short, kid-English "why
    we picked it". No scores, no weights, no risk numbers anywhere on this
    screen — those stay on the team's side. */
 const CLIENT_CATEGORIES = ["Large cap", "Large & Mid cap", "Mid cap",
-                          "Small cap", "Flexi/Multi cap"];
+                          "Small cap", "Flexi/Multi cap", "Balanced/Hybrid"];
 function showResult(code, recorded) {
   const list = rankForClient(buildClientFunds(), result.weights);
   // list is sorted by the client's personal score, so the first fund that
